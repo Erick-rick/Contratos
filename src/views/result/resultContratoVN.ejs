@@ -38,7 +38,7 @@
 <body class="d-flex flex-column h-100">
 
     <!-- Begin page content -->
-    <form runat="server" class="flex-shrink-0">
+    <form class="flex-shrink-0">
         <div>
 
             <!--PAGINA 1-->
@@ -49,78 +49,78 @@
                     <div class="col"></div>
                     <div class="col text-end">
                         <p>Belo Horizonte,
-                            <label runat="server" ID="lbDataAtual2" Text="DataAtual"> </label>
+                            <label ID="lbDataAtual2" Text="DataAtual"> </label>
                         </p>
                     </div>
                 </div>
                 <br />
                 <p class="fs-4"><strong>CONTRATO DE COMPRA DE VEÍCULOS NOVOS</strong></p>
                 <p>1 - Cliente:
-                    <label runat="server" ID="lbCliente" Text=" - "></label>
+                    <label  ID="lbCliente" Text=" - "></label>
                 </p>
                 <div class="row">
                     <div class="col">
                         <p>RG/INSCRIÇÃO ESTADUAL:
-                            <label runat="server" ID="lbRg" Text=" - "></label>
+                            <label  ID="Rg" Text=" - "><%= contrato.rg %></label>
                         </p>
                     </div>
                     <div class="col">
                         <p>CPF/CNPJ:
-                            <label runat="server" ID="lbCpf" Text=" - "></label>
+                            <label  ID="lbCpf" Text=" - "></label>
                         </p>
                     </div>
                 </div>
                 <p>Endereço:
-                    <label runat="server" ID="lbEndereco" Text=" - "></label>
+                    <label  ID="lbEndereco" Text=" - "></label>
                 </p>
                 <div class="row">
                     <div class="col">
                         <p>Telefone:
-                            <label runat="server" ID="lbTelefone" Text=" - "></label>
+                            <label  ID="lbTelefone" Text=" - "></label>
                         </p>
                     </div>
                     <div class="col">
                         <p>Email:
-                            <label runat="server" ID="lbEmail" Text=" - "></label>
+                            <label  ID="lbEmail" Text=" - "></label>
                         </p>
                     </div>
                 </div>
                 <p>Vendedor:
-                    <label runat="server" ID="lbVendedor" Text=" - "></label>
+                    <label  ID="lbVendedor" Text=" - "></label>
                 </p>
 
                 <hr />
                 <p>2 - Descrição do Veículo</p>
                 <p>Veículo:
-                    <label runat="server" ID="lbVeiculo" Text=" - "></label>
+                    <label  ID="lbVeiculo" Text=" - "></label>
                 </p>
                 <div class="row">
                     <div class="col">
                         <p>Ano/Modelo:
-                            <label runat="server" ID="lbAnoModelo" Text=" - "></label>
+                            <label  ID="lbAnoModelo" Text=" - "></label>
                         </p>
                     </div>
                     <div class="col">
                         <p>Cor:
-                            <label runat="server" ID="lbCor" Text=" - "></label>
+                            <label  ID="lbCor" Text=" - "></label>
                         </p>
                     </div>
                 </div>
                 <p>Opcional:
-                    <label runat="server" ID="lbOpc" Text=" - "></label>
+                    <label  ID="lbOpc" Text=" - "></label>
                 </p>
                 <p>Cortesia:
-                    <label runat="server" ID="lbCortesia" Text=" - "></label>
+                    <label  ID="lbCortesia" Text=" - "></label>
                 </p>
                 <p>Observação:
-                    <label runat="server" ID="lbObs" Text=" - "></label>
+                    <label  ID="lbObs" Text=" - "></label>
                 </p>
                 <hr />
                 <p>3 - Características do Veículo Informado na Negociação.</p>
                 <p>3.1 - Comprador ciente da disponibilidade de uma unidade junto ao Fabricante que será solicitadapela
                     concessionária somente após o sinal de compra e assinatura do respectivo contrato.</p>
                 <p>3.2 - Prazo previsto de entrega:
-                    <label runat="server" ID="lbPrazo" Text=" - " Visible="false"></label>acima de 90 dias, após
+                    <label  ID="lbPrazo" Text=" - " Visible="false"></label>acima de 90 dias, após
                     comprovação de todos os os pagamentos que compõem o preço do veículo (sinal, pagto à vista,
                     financiamento de agentes bancários e/ou consórcios).
                 </p>
@@ -140,15 +140,15 @@
                     termo aditivo ao presente contrato com relação a(s) alteração(oes) requeridas pelo comprador.</p>
                 <p>4 - Condições de Pagamento</p>
                 <p>4.1 - Valor do Veículo: R$
-                    <label runat="server" ID="lbValorVeiculo" Text=" - "></label>
+                    <label  ID="lbValorVeiculo" Text=" - "></label>
                 </p>
                 <p>4.2 - Sinal á Vista: R$
-                    <label runat="server" ID="lbSinal" Text=" - "></label>
+                    <label  ID="lbSinal" Text=" - "></label>
                 </p>
                 <p>4.3 - Sinal veículo seminovo - Placa
-                    <label runat="server" ID="lbPlacaSeminovo" Text=" - "></label>, avaliado em R$
-                    <label runat="server" ID="lbValorSeminovo" Text=" - "></label>, data avaliação
-                    <label runat="server" ID="lbDataAvaliacao" Text=" - "></label>
+                    <label  ID="lbPlacaSeminovo" Text=" - "></label>, avaliado em R$
+                    <label  ID="lbValorSeminovo" Text=" - "></label>, data avaliação
+                    <label  ID="lbDataAvaliacao" Text=" - "></label>
                     aceitação do veículo seminovo como parte de pagamento do negócio somente será confirmada após
                     observadas condições disposto na cláusula 5.8 deste instrumento.
                 </p>
@@ -156,13 +156,13 @@
                     entregue somente após.disponibilidade do veículo OKM na concessionária.</p>
                 <p>4.5 - O comprador está ciente que se houver.cancelamento ou desistência de compra, a AUTOMAX não irá
                     devolver.veículo de PLACA
-                    <label runat="server" ID="lbPlacaSeminovo2" Text=" - "></label>, entregue como sinal de
+                    <label  ID="lbPlacaSeminovo2" Text=" - "></label>, entregue como sinal de
                     compra, mas fará pagamento ao Sr.(a)
-                    <label runat="server" ID="lbCliente2" Text=" - "></label>
+                    <label  ID="lbCliente2" Text=" - "></label>
                     do valor de R$
-                    <label runat="server" ID="lbValorSeminovo2" Text=" - "></label>
+                    <label  ID="lbValorSeminovo2" Text=" - "></label>
                     avaliação realizada em
-                    <label runat="server" ID="lbDataAvaliacao2" Text=" - "></label>, corrigida monetariamente
+                    <label  ID="lbDataAvaliacao2" Text=" - "></label>, corrigida monetariamente
                     pelos índices legais da tabela do Tribunal de Justiça do Estado de Minas Gerais.
                 </p>
                 <p>4.6 - Restante do pagamento do veículo OKM será após emissão da Nota Fiscal, em conformidade
@@ -196,39 +196,39 @@
                 <p>6 - Lei 13.111/ 2015.Impostos, taxas, multas.restrições sobre.veículo quando da entrega do mesmo pela
                     concessionária. Assinalar.ocorrência de alguma(s) da(s) situações abaixo:</p>
                 <p>6.1 - Valor dos Tributos incidentes sobre a comercialização do veículo: R$
-                    <label runat="server" ID="lbtributo" Text=" - "></label>
+                    <label  ID="lbtributo" Text=" - "></label>
                 </p>
                 <p>6.2 - Situação de regularidade do veículo quanto.:</p>
                 <p>
-                    <asp:CheckBox runat="server" ID="cbGarantia" />
+                    <asp:CheckBox  ID="cbGarantia" />
                     - Garantia de procedência .
                 </p>
                 <p>
-                    <asp:CheckBox runat="server" ID="cbDebitoMultas" />
+                    <asp:CheckBox  ID="cbDebitoMultas" />
                     - Débito de multas/taxas anuais legalmente devidas :
                 </p>
                 <div class="row">
                     <div class="col">
                         <p>Multas:
-                            <label runat="server" ID="lbMultas" Text=" - "></label>
+                            <label  ID="lbMultas" Text=" - "></label>
                         </p>
                     </div>
                     <div class="col">
                         <p>Taxas Anuais:
-                            <label runat="server" ID="lbTaxas" Text=" - "></label>
+                            <label  ID="lbTaxas" Text=" - "></label>
                         </p>
                     </div>
                 </div>
                 <p>
-                    <asp:CheckBox runat="server" ID="cbDebitosImpostos" />
+                    <asp:CheckBox  ID="cbDebitosImpostos" />
                     - Débitos de impostos.
                 </p>
                 <p>
-                    <asp:CheckBox runat="server" ID="cbAliencacao" />
+                    <asp:CheckBox  ID="cbAliencacao" />
                     - Alienação fiduciária ou reserva de domínio.
                 </p>
                 <p>
-                    <asp:CheckBox runat="server" ID="CheckBox1" />
+                    <asp:CheckBox  ID="CheckBox1" />
                     - Existência de qualquer outro registro que limita ou impeça a circulação do veículo?.
                 </p>
 
@@ -275,7 +275,7 @@
 
                 <br />
                 <p>Belo Horizonte,
-                    <label runat="server" ID="lbDataAtual" Text="DataAtual" />
+                    <label  ID="lbDataAtual" Text="DataAtual" />
                 </p>
                 <br />
                 <br />
@@ -300,7 +300,7 @@
     <script src="../../assets/js/app.js"></script>
 
     <script src="../../assets/js/main.js"></script>
-
+    
     <script type="text/javascript">
         /* Máscaras ER */
         function mascara(o, f) {
