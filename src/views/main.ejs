@@ -1,0 +1,18 @@
+<%- include('includes/head'); %>
+
+<h1>Formulário de Contrato</h1>
+
+<form method="POST" action="/contrato">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome"><br>
+
+  <label for="endereco">Endereço:</label>
+  <input type="text" id="endereco" name="endereco"><br>
+
+  <label for="dataNascimento">Data de Nascimento:</label>
+  <input type="date" id="dataNascimento" name="dataNascimento"><br>
+
+  <input type="submit" value="Enviar">
+  </form>
+
+  <%- include('includes/footer'); %>

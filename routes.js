@@ -11,11 +11,10 @@ route.get('/', homeController.paginaInicial);
 route.post('/', homeController.trataPost);
 
 // Rotas de Login
-route.get('/login/index', loginController.index);
-route.post('/login/register', loginController.register);
+//route.post('/login/register', loginController.register);
 
 //Rotas de Contratos
-route.get('/contratoVD/index', contratoController.contratoVD);
+//route.get('/contratoVD/index', contratoController.contratoVD);
 
 
 
