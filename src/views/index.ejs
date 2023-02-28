@@ -20,6 +20,8 @@
       </div>
 
       <section id="multiple-column-form">
+      
+        <form method="POST" action="/contrato">
 
         <!--Vendedor-->
         <div class="row match-height">
@@ -31,7 +33,7 @@
                     <div class="col-md-12 col-12">
                       <div class="form-group">
                         <label for="first-name-column">Vendedor</label>
-                        <input type="text" id="vendedor" class="form-control" placeholder="Vendedor" name="fname-column">
+                        <input type="text" id="vendedor" class="form-control" placeholder="Vendedor" name="vendedor">
                       </div>
                     </div>
                   </div>
@@ -54,7 +56,7 @@
                     <div class="col-md-12 col-12">
                       <div class="form-group">
                         <label for="first-name-column">Cliente</label>
-                        <input type="text" id="cliente" runat="server" class="form-control" placeholder="Cliente" name="fname-column" required>
+                        <input type="text" id="nomeCliente" name="nomeCliente" class="form-control" placeholder="Cliente" required>
                       </div>
                     </div>
                   </div>
@@ -63,15 +65,13 @@
                     <div class="col-md-6 col-12">
                       <div class="form-group">
                         <label for="first-name-column">RG/INSCRIÇÃO ESTADUAL</label>
-                        <input type="text" id="RG" class="form-control" placeholder="RG"
-                          name="fname-column" required>
+                        <input type="text" id="RG" class="form-control" placeholder="RG" name="RG" required>
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
                       <div class="form-group">
                         <label for="last-name-column">CPF/CNPJ</label>
-                        <input type="text" id="CPF_CNPJ" class="form-control" name="cpfcnpj" onfocus="retirarFormatacao(this);" onblur="formatarCampo(this);" maxlength="14"
-                          placeholder="CPF/CNPJ" required />
+                        <input type="text" id="CPF_CNPJ" class="form-control" name="cpfcnpj" onfocus="retirarFormatacao(this);" onblur="formatarCampo(this);" maxlength="14" placeholder="CPF/CNPJ" required />
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
@@ -83,7 +83,7 @@
                     <div class="col-md-6 col-12">
                       <div class="form-group">
                         <label for="company-column">Email</label>
-                        <input type="email" id="email" class="form-control" name="company-column" placeholder="Email" required>
+                        <input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
                       </div>
                     </div>
                   </div>
@@ -91,14 +91,13 @@
                     <div class="col-md-3 col-12">
                       <div class="form-group">
                         <label for="email-id-colunm">CEP</label>
-                        <input name="cep" type="text" id="CEP" class="mascCEP form-control" value=""
-                          size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="CEP" required />
+                        <input name="cep" type="text" id="CEP" class="mascCEP form-control" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="CEP" required />
                       </div>
                     </div>
                     <div class="col-md-5 col-12">
                       <div class="form-group">
                         <label for="email-id-column">Endereço</label>
-                        <input type="text" id="endereco" class="form-control" name="email-id-column" placeholder="Endereço" required>
+                        <input type="text" id="endereco" class="form-control" name="endereco" placeholder="Endereço" required>
                       </div>
                     </div>
                     <div class="col-md-4 col-12">
@@ -380,6 +379,7 @@
           </div>
         </div>
       </section>
+    </form>
     </div>
 
     <a id="PointA" name="PointA"></a>
