@@ -1,0 +1,415 @@
+<%- include('includes/head') %>
+  <%- include('includes/menu') %>
+
+    <div class="main-content container-fluid">
+      <div class="page-title">
+        <div class="row">
+          <div class="col-12 col-md-6 order-md-1 order-last">
+            <h3>Contrato Varejo</h3>
+            <p class="text-subtitle text-muted">Preencha os campos para continuar</p>
+          </div>
+          <div class="col-12 col-md-6 order-md-2 order-first">
+            <nav aria-label="breadcrumb" class='breadcrumb-header'>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Contrato Automax</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contrato Varejo</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <section id="multiple-column-form">
+
+        <!--Vendedor-->
+        <div class="row match-height">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">Vendedor</label>
+                        <input type="text" id="txbVendedor" class="form-control" placeholder="Vendedor" runat="server"
+                          name="fname-column">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Dados do Cliente-->
+        <div class="row match-height">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Dados do Cliente</h4>
+              </div>
+              <div class="card-content">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">Cliente</label>
+                        <input type="text" id="txbCliente" runat="server" class="form-control" placeholder="Cliente"
+                          name="fname-column" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">RG/INSCRIÇÃO ESTADUAL</label>
+                        <input type="text" id="txbRG" runat="server" class="form-control" placeholder="RG"
+                          name="fname-column" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="last-name-column">CPF/CNPJ</label>
+                        <input type="text" id="txbCPFCNPJ" runat="server" class="form-control" name="cpfcnpj"
+                          onfocus="retirarFormatacao(this);" onblur="formatarCampo(this);" maxlength="14"
+                          placeholder="CPF/CNPJ" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="city-column">Telefone</label>
+                        <input type="text" name="telefone" id="telefone1" runat="server" class="form-control"
+                          placeholder="Telefone" maxlength="15" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="company-column">Email</label>
+                        <input type="email" id="txbEmail" runat="server" class="form-control" name="company-column"
+                          placeholder="Email" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 col-12">
+                      <div class="form-group">
+                        <label for="email-id-colunm">CEP</label>
+                        <input name="cep" type="text" runat="server" id="txbCEP" class="mascCEP form-control" value=""
+                          size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="CEP" required />
+                      </div>
+                    </div>
+                    <div class="col-md-5 col-12">
+                      <div class="form-group">
+                        <label for="email-id-column">Endereço</label>
+                        <input type="text" id="txbEndereco" runat="server" class="form-control" name="email-id-column"
+                          placeholder="Endereço" required>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <div class="form-group">
+                        <label for="email-id-column">Número</label>
+                        <input type="text" min="1" id="txbNumero" runat="server" class="form-control"
+                          name="email-id-column" placeholder="Número" required>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 col-12">
+                      <div class="form-group">
+                        <label for="email-id-column">Bairro</label>
+                        <input type="text" id="txbBairro" runat="server" class="form-control" name="email-id-column"
+                          placeholder="Bairro" required>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                      <div class="form-group">
+                        <label for="email-id-colunm">Complemento</label>
+                        <input type="text" id="txbComplemento" runat="server" class="form-control" name="email-id-colum"
+                          placeholder="Complemento" />
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                      <div class="form-group">
+                        <label for="email-id-column">Cidade</label>
+                        <input type="text" id="txbCidade" runat="server" class="form-control" name="email-id-column"
+                          placeholder="Cidade" required>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                      <div class="form-group">
+                        <label for="email-id-column">Estado</label>
+                        <input type="text" id="txbEstado" runat="server" class="form-control" name="email-id-column"
+                          placeholder="Estado" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Dados do Cliente -->
+        <div class="row match-height">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Dados do Veículo</h4>
+              </div>
+              <div class="card-content">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">Veículo</label>
+                        <select runat="server" ID="ddlModels" CssClass="form-control">
+                          <option> teste 1 </option>
+                          <option> teste 1 </option>
+                          <option> teste 1 </option>
+
+                        </select>
+
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">Ano</label>
+                        <input type="number" id="txbAno" runat="server" class="form-control" min="2020" max="2100"
+                          step="1" placeholder="Ano" name="fname-column">
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-12">
+                      <div class="form-group">
+                        <label for="last-name-column">Modelo</label>
+                        <input type="number" id="txbModelo" runat="server" class="form-control" min="2020" max="2100"
+                          step="1" placeholder="Ano" name="fname-column">
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="city-column">Cor</label>
+                        <input type="text" id="txbCor" runat="server" class="form-control" placeholder="Cor"
+                          name="lname-column" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <label for="company-column">Opcionais</label>
+                        <input type="text" id="txbOpcional" runat="server" class="form-control" name="company-column"
+                          placeholder="Opcional - Separe os opcionais por ; (ponto e virgula)" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <label for="company-column">Cortesias</label>
+                        <input type="text" id="txbCortesia" runat="server" class="form-control" name="company-column"
+                          placeholder="Cortesia - Separe as cortesias por ; (ponto e virgula)" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <label for="company-column">Observações</label>
+                        <input type="text" id="txbObs" runat="server" class="form-control" name="company-column"
+                          placeholder="Obs..." />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <label for="email-id-column">Prazo de Entrega</label>
+                        <input type="number" id="txbPrazo" runat="server" class="form-control" name="email-id-column"
+                          placeholder="Prazo de Entrega" value="90" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Dados de Pagamento -->
+        <div class="row match-height">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Dados do Pagamento</h4>
+              </div>
+              <div class="card-content">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">Valor do Veículo (R$)</label>
+                        <input type="text" id="txbValorVeiculo" runat="server" class="form-control"
+                          placeholder="Valor do Veículo" name="fname-column"
+                          onkeypress="return(moeda(this,'.',',',event))" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">Sinal à Vista (R$)</label>
+                        <input type="text" id="txbSinal" runat="server" class="form-control" placeholder="Sinal"
+                          name="fname-column" onkeypress="return(moeda(this,'.',',',event))" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <label for="email-id-column">Valor dos Tributos incidentes sobre a comercialização do veículo
+                          (R$)</label>
+                        <input type="number" id="txbValorTributos" runat="server" class="form-control"
+                          name="email-id-column"
+                          placeholder="Valor dos Tributos incidentes sobre a comercialização do veículo (R$)"
+                          onkeypress="return(moeda(this,'.',',',event))" value="0">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">Veículo Seminovo - Placa</label>
+                        <input type="text" id="txbVeiculoSeminovo" runat="server" class="form-control"
+                          placeholder="Placa" name="fname-column">
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">Avaliação (R$)</label>
+                        <input type="text" id="txbAvaliacao" runat="server" class="form-control" placeholder="Avaliação"
+                          name="fname-column" onkeypress="return(moeda(this,'.',',',event))">
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">Data Avaliação</label>
+                        <input type="date" id="txbDataAvaliacao" runat="server" class="form-control" placeholder="Sinal"
+                          name="fname-column">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <div class="form-group">
+                        <label for="first-name-column">Loja</label>
+                        <select name="txbLoja" id="txbLoja" class="form-control" runat="server">
+                          <option selected>Automax - Raja Gabaglia, 2222 - Estoril, BH - MG</option>
+                          <option>Automax - Padre Pedro Evangelista, 44 - Coração Eucarístico, BH - MG</option>
+                          <option>Automax - Barão Homem de Melo, 4350 - Estoril, BH - MG</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" id="foo"></a>
+                  <div class="row mt-2">
+                    <div class="col-md-12 col-12">
+                      <strong>Situação de regularidade do veículo quanto a:</strong>
+                      <div class="row mt-4">
+                        <div class="form-group">
+                          <input type="checkbox" />
+                          <label runat="server" ID="CheckBox0" >Garantia de Procedência</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <input type="checkbox" />
+                          <label runat="server" ID="CheckBox1" AutoPostBack="true"> Débito de multas e taxas anuais legalmente devidas" </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <input type="checkbox"/>
+                          <label runat="server" ID="CheckBox2">Débitos de impostos</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <input type="checkbox"/>
+                          <label runat="server" ID="CheckBox3">Alienação fiduciária ou reserva de domínio</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <input type="checkbox" />
+                          <label runat="server" ID="CheckBox4">Existência de qualquer outro registro que limita ou impeça a circulação do veículo?</label>
+                        </div>
+                      </div>
+
+                      <!--MULTAS-->
+                        <!--
+                      <div class="row" id="divMultas" runat="server" visible="false">
+                        <hr class="mt-4" />
+                        <div class="col-md-6 col-12">
+                          <div class="form-group">
+                            <label for="first-name-column">Multas (R$)</label>
+                            <textbox runat="server" ID="txbMultas" CssClass="form-control" placecholder="Multas">
+                              </asp:TextBox>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                          <div class="form-group">
+                            <label for="first-name-column">Taxas Anuais (R$)</label>
+                            <input type="text" id="txbTaxaAnual" runat="server" class="form-control"
+                              placeholder="Taxas anuais" onkeypress="return(moeda(this,'.',',',event))"
+                              name="fname-column">
+                          </div>
+                        </div>
+                      </div>
+                      LIMITACAO
+                      <div class="row" id="divLimitacao" runat="server" visible="false">
+                        <hr class="mt-4" />
+                        <div class="col-md-12 col-12">
+                          <div class="form-group">
+                            <label for="first-name-column">Limitação ou empecilho para circulação do veículo</label>
+                            <input type="text" id="txbLimitacao" runat="server" class="form-control"
+                              placeholder="Limitação ou empecilho para circulação do veículo" name="fname-column">
+                          </div>
+                        </div>
+                      </div>
+                      -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-md-12 col-12">
+                <button runat="server" ID="btnContrato" Text="Gerar Contrato" class="btn btn-primary w-100"
+                  OnClick="btnSalvar_Click">Gerar Contrato</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <a id="PointA" name="PointA"></a>
+    
+    <footer>
+      <div class="footer clearfix mb-0 text-muted">
+        <div class="float-start">
+        </div>
+        <div class="float-end">
+
+        </div>
+      </div>
+    </footer>
+    </div>
+    <%- include('includes/footer'); %>

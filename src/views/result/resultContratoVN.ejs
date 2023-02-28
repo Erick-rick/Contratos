@@ -1,0 +1,338 @@
+<%- include('includes/head'); %>
+
+
+
+<title>Contratos - Contrato Pedido Futuro </title>
+
+<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">
+<!-- Bootstrap core CSS -->
+<link href="./Content/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+<!-- Custom styles for this template -->
+<link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <!-- Begin page content -->
+    <form runat="server" class="flex-shrink-0">
+        <div>
+
+            <!--PAGINA 1-->
+                <div class="text-center mt-2 mb-2">
+                    <img src=".assets/images/AutomaxLogo.png" class="img-fluid w-25 align-content-center" />
+                </div>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col text-end">
+                        <p>Belo Horizonte,
+                            <label runat="server" ID="lbDataAtual2" Text="DataAtual"> </label>
+                        </p>
+                    </div>
+                </div>
+                <br />
+                <p class="fs-4"><strong>CONTRATO DE COMPRA DE VEÍCULOS NOVOS</strong></p>
+                <p>1 - Cliente:
+                    <label runat="server" ID="lbCliente" Text=" - "></label>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <p>RG/INSCRIÇÃO ESTADUAL:
+                            <label runat="server" ID="lbRg" Text=" - "></label>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>CPF/CNPJ:
+                            <label runat="server" ID="lbCpf" Text=" - "></label>
+                        </p>
+                    </div>
+                </div>
+                <p>Endereço:
+                    <label runat="server" ID="lbEndereco" Text=" - "></label>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <p>Telefone:
+                            <label runat="server" ID="lbTelefone" Text=" - "></label>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>Email:
+                            <label runat="server" ID="lbEmail" Text=" - "></label>
+                        </p>
+                    </div>
+                </div>
+                <p>Vendedor:
+                    <label runat="server" ID="lbVendedor" Text=" - "></label>
+                </p>
+
+                <hr />
+                <p>2 - Descrição do Veículo</p>
+                <p>Veículo:
+                    <label runat="server" ID="lbVeiculo" Text=" - "></label>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <p>Ano/Modelo:
+                            <label runat="server" ID="lbAnoModelo" Text=" - "></label>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>Cor:
+                            <label runat="server" ID="lbCor" Text=" - "></label>
+                        </p>
+                    </div>
+                </div>
+                <p>Opcional:
+                    <label runat="server" ID="lbOpc" Text=" - "></label>
+                </p>
+                <p>Cortesia:
+                    <label runat="server" ID="lbCortesia" Text=" - "></label>
+                </p>
+                <p>Observação:
+                    <label runat="server" ID="lbObs" Text=" - "></label>
+                </p>
+                <hr />
+                <p>3 - Características do Veículo Informado na Negociação.</p>
+                <p>3.1 - Comprador ciente da disponibilidade de uma unidade junto ao Fabricante que será solicitadapela
+                    concessionária somente após o sinal de compra e assinatura do respectivo contrato.</p>
+                <p>3.2 - Prazo previsto de entrega:
+                    <label runat="server" ID="lbPrazo" Text=" - " Visible="false"></label>acima de 90 dias, após
+                    comprovação de todos os os pagamentos que compõem o preço do veículo (sinal, pagto à vista,
+                    financiamento de agentes bancários e/ou consórcios).
+                </p>
+                <p>3.3 - O(s) preço(s) do(s) veículo(s) estão sujeitos à alteração(ões), conforme tabela do valor do(s)
+                    veículo(s) à época do faturamento.</p>
+                <p>3.4 - Fica ciente o comprador que o fabricante poderá alterar o modelo do veículo escolhido , bem
+                    como , alterar os itens de série do veículo, entre a data da compra e a data da entrega do veículo ,
+                    ficando a cargo do comprador o ônus destas mudanças.</p>
+
+                <div style="break-after: page"></div>
+
+                <p>3.5 - No preço vigente na data do faturamento, exceto se de outra forma ajustado entre as partes ,já
+                    estão incluídos impostos, encargos.despesas, exceto aquelas necessárias ao licenciamento,
+                    emplacamento.seguros. Está incluído no preço do(s) veículo(s) o valor do transporte deste até a
+                    concessionária.</p>
+                <p>3.6 - No caso de haver por parte do cliente alteração no pedido do veículo, deverão as partes firmar
+                    termo aditivo ao presente contrato com relação a(s) alteração(oes) requeridas pelo comprador.</p>
+                <p>4 - Condições de Pagamento</p>
+                <p>4.1 - Valor do Veículo: R$
+                    <label runat="server" ID="lbValorVeiculo" Text=" - "></label>
+                </p>
+                <p>4.2 - Sinal á Vista: R$
+                    <label runat="server" ID="lbSinal" Text=" - "></label>
+                </p>
+                <p>4.3 - Sinal veículo seminovo - Placa
+                    <label runat="server" ID="lbPlacaSeminovo" Text=" - "></label>, avaliado em R$
+                    <label runat="server" ID="lbValorSeminovo" Text=" - "></label>, data avaliação
+                    <label runat="server" ID="lbDataAvaliacao" Text=" - "></label>
+                    aceitação do veículo seminovo como parte de pagamento do negócio somente será confirmada após
+                    observadas condições disposto na cláusula 5.8 deste instrumento.
+                </p>
+                <p>4.4 - O Veículo seminovo descrito na cláusula 4.3, estará sujeito.nova avaliação no caso do mesmo ser
+                    entregue somente após.disponibilidade do veículo OKM na concessionária.</p>
+                <p>4.5 - O comprador está ciente que se houver.cancelamento ou desistência de compra, a AUTOMAX não irá
+                    devolver.veículo de PLACA
+                    <label runat="server" ID="lbPlacaSeminovo2" Text=" - "></label>, entregue como sinal de
+                    compra, mas fará pagamento ao Sr.(a)
+                    <label runat="server" ID="lbCliente2" Text=" - "></label>
+                    do valor de R$
+                    <label runat="server" ID="lbValorSeminovo2" Text=" - "></label>
+                    avaliação realizada em
+                    <label runat="server" ID="lbDataAvaliacao2" Text=" - "></label>, corrigida monetariamente
+                    pelos índices legais da tabela do Tribunal de Justiça do Estado de Minas Gerais.
+                </p>
+                <p>4.6 - Restante do pagamento do veículo OKM será após emissão da Nota Fiscal, em conformidade
+                    com.disposto na cláusula 3.4 do presente instrumento.</p>
+                <p>5 - Cláusulas Codições da Venda</p>
+                <p>5.1 - Após preenchido.assinado pelas partes todo.pedido com os dados do veículo pelo comprador, este
+                    só poderá ser alterado ou modificado caso haja anuência de ambas as partes e, sejam ressarcidas pelo
+                    adquirente do veículo okm as despesas que houver decorrentes do faturamento.</p>
+                <p>5.2 - Nas condições de pagamento prazo ou financiamento,.não aprovação da ficha cadastral constitui
+                    motivo para rescisão do negócio.</p>
+                <p>5.3 - As responsabilidades pelas informações cadastrais não cabem.vendedora nos casos de
+                    financiamento..presente negócio estará desfeito de pleno direito, com.restituição da importância
+                    paga pelo comprador.título de entrada.parte de pagamento, na hipótese de que.agente financeiro/ou
+                    consórcio não aprovar.operação.</p>
+                <p>5.4 - A vendedora não assume nenhuma responsabilidade sobre os indexadores ou critérios de
+                    atualização monetária das suas financeiras ou consórcio.</p>
+                <p>5.5 - Quando.veículo transitar, por solicitação do comprador, qualquer dano, se houver, correrá por
+                    conta do mesmo.</p>
+                <p>5.6 - O veículo será entregue ao comprador ou pessoa devidamente autorizada por ele mediante
+                    apresentação de autorização com firma reconhecida. </p>
+                <p>5.7 - A AUTOMAX, informa, que na hipótese de ocorrer a desistência da compra do veículo descrito
+                    neste contrato de compra e venda , o comprador deverá pagar à Concessionária uma multa contratual no
+                    valor de 2.000,00 ( dois mil reais ). </p>
+                <p>5.8 - VENDEDORA informa ao COMPRADOR que.negociação de compra.venda do veículo, somente será
+                    concluída, após ser realizado.laudo de avaliação cautelar feito por uma empresa especializada.após
+                    ser realizada.consulta jurídica do veículo entregue como parte de pagamento.de seu proprietário.
+                    Informa ainda.VENDEDORA que, caso.referido veiculo não seja aprovado no citado laudo (por qualquer
+                    vício “oculto”), ou não seja aprovado na mencionada consulta jurídica,.veículo poderá sofrer
+                    alteração no valor de sua avaliação e/ou.cancelamento da compra.venda. </p>
+                <p>5.9 - O comprador procederá.vistoria no veículo no ato da entrega do bem novo.</p>
+                <p>6 - Lei 13.111/ 2015.Impostos, taxas, multas.restrições sobre.veículo quando da entrega do mesmo pela
+                    concessionária. Assinalar.ocorrência de alguma(s) da(s) situações abaixo:</p>
+                <p>6.1 - Valor dos Tributos incidentes sobre a comercialização do veículo: R$
+                    <label runat="server" ID="lbtributo" Text=" - "></label>
+                </p>
+                <p>6.2 - Situação de regularidade do veículo quanto.:</p>
+                <p>
+                    <asp:CheckBox runat="server" ID="cbGarantia" />
+                    - Garantia de procedência .
+                </p>
+                <p>
+                    <asp:CheckBox runat="server" ID="cbDebitoMultas" />
+                    - Débito de multas/taxas anuais legalmente devidas :
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <p>Multas:
+                            <label runat="server" ID="lbMultas" Text=" - "></label>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>Taxas Anuais:
+                            <label runat="server" ID="lbTaxas" Text=" - "></label>
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    <asp:CheckBox runat="server" ID="cbDebitosImpostos" />
+                    - Débitos de impostos.
+                </p>
+                <p>
+                    <asp:CheckBox runat="server" ID="cbAliencacao" />
+                    - Alienação fiduciária ou reserva de domínio.
+                </p>
+                <p>
+                    <asp:CheckBox runat="server" ID="CheckBox1" />
+                    - Existência de qualquer outro registro que limita ou impeça a circulação do veículo?.
+                </p>
+
+                <div style="break-after: page"></div>
+
+                <p>7 - Compartilhamento de Dados</p>
+                <p>7.1 - Para cumprimento da obrigação contatual e legal vinculada à execução do presente contrato, a
+                    concessionária compartilhará os dados pessoais do Titular com outros agentes de tratamento de dados,
+                    para as finalidades listadas neste instrumento, comprometendo-se todos os envolvidos com os
+                    princípios da boa-fé, finalidade, adequação, necessidade, livre acesso, qualidade dos dados,
+                    transparência, segurança, prevenção, não discriminação e responsabilização e prestação de contas.
+                </p>
+                <p>7.2 - A concessionária, em decorrência do seu contrato com a montadora , poderá realizar a
+                    transferência internacional dos Dados Pessoais tratados, observando as previsões legais aplicáveis.
+                </p>
+                <p>7.3 - A concessionária e seus parceiros selecionados se responsabilizam por manter medidas de
+                    segurança, técnicas e administrativas suficientes a proteger os dados pessoais do Titular), se
+                    comprometendo com sua notificação, caso ocorra algum incidente de segurança que possa acarretar
+                    risco ou dano relevante, conforme artigo 48 da Lei n° 13.709/2018.</p>
+                <p>7.4 - O Titular poderá acessar livremente os seus dados pessoais, em consulta facilitada e gratuita,
+                    como o objetivo de garantir a integralidade dos seus dados. A gratuidade será mantida, desde que não
+                    haja pedidos manifestamente infundados, excessivos ou repetitivos, casos estes nos quais serão
+                    cobradas taxas adicionais pelo acesso aos dados, tendo-se em vista os custos envolvidos na consulta.
+                    Para exercer o seu direito de acesso e retificação, o Titular de dados pessoais deverá encaminhar um
+                    e-mail ao DPO: jurídico@automaxfiat.com.br, que em prazo razoável, informará ao titular sobre o
+                    tratamento.</p>
+                <p>7.5 - À concessionária e os seus parceiros selecionados utilizarão e manterão os dados pessoais do
+                    Titular arquivados em meio digital, durante todo o período contratualmente firmado para as
+                    finalidades relacionadas nesse termo e ainda após o término da contratação para cumprimento de
+                    obrigação legal ou impostas por órgãos de fiscalização, nos termos do artigo 16 da Lei n°
+                    13.709/2018.</p>
+                <p>7.6 - O Titular está ciente que na medida do permitido pela legislação “Lei Geral de Proteção de
+                    Dados”, o GRUPO AUTOMAX e a montadora poderão também tratar os seus dados pessoais e informações
+                    sobre o seu veículo para realizar estudos visando o desenvolvimento e melhoria em nossos produtos e
+                    serviços, para enviar comunicação a você sobre a concessionária e a montadora, seus produtos e
+                    serviços, bem como poderá entrar em contrato para realização da pesquisa de satisfação.</p>
+                <p>7.7 - O prazo de armazenamento dos dados físicos será por 05 ( cinco ) anos e o prazo de
+                    armazenamento dos dados digitais será de 10( dez ) anos prorrogável por mais 05( cinco ) anos, em
+                    conformidade com o disposto na legislação vigente do CDC - Código de Defesa do Consumidor e da LGPD
+                    – Lei Geral de Proteção de Dados.</p>
+                <br />
+
+                <div style="break-after: page"></div>
+
+                <br />
+                <p>Belo Horizonte,
+                    <label runat="server" ID="lbDataAtual" Text="DataAtual" />
+                </p>
+                <br />
+                <br />
+                <p><strong>De Acordo: </strong></p>
+                <br />
+                <p>Cliente</p>
+                <hr />
+                <br />
+                <br />
+                <p>Vendedor</p>
+                <hr />
+                <br />
+                <br />
+                <p>Gerente</p>
+                <hr />
+        </div>
+    </form>
+
+    <script src="../../docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../../assets/js/feather-icons/feather.min.js"></script>
+    <script src="../../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/app.js"></script>
+
+    <script src="../../assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        /* Máscaras ER */
+        function mascara(o, f) {
+            v_obj = o
+            v_fun = f
+            setTimeout("execmascara()", 1)
+        }
+        function execmascara() {
+            v_obj.value = v_fun(v_obj.value)
+        }
+        function mtel(v) {
+            v = v.replace(/\D/g, ""); //Remove tudo o que não é dígito
+            v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+            v = v.replace(/(\d)(\d{4})$/, "$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+            return v;
+        }
+        function id(el) {
+            return document.getElementById(el);
+        }
+        window.onload = function () {
+            id('telefone1').onkeyup = function () {
+                mascara(this, mtel);
+            }
+            id('telefone2').onkeyup = function () {
+                mascara(this, mtel);
+            }
+        }
+    </script>
+
+    <script type="text/x-jquery-tmpl">
+     ar WhereToMove = jQuery("#PointA").position().top;
+    jQuery("html,body").animate({scrollTop: WhereToMove }, 1000);
+    </script>
+
+<%- include('includes/footer'); %>

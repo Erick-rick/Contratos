@@ -1,0 +1,66 @@
+<form runat="server" id="Form1">
+    <div id="app">
+        <div id="sidebar" class='active'>
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <img src="./assets/images/AutomaxLogo.png" class="w-100" alt="" srcset="">
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class='sidebar-title'>Menu</li>
+                        <li class="sidebar-item" ruinat="server" id="menuContratoVN">
+                            <a href="/" class='sidebar-link'>
+                                <i data-feather="file-text" width="20"></i>
+                                <span>Contrato VN</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  " ruinat="server" id="menuContratoVD">
+                            <a href="/contratoVD/index" class='sidebar-link'>
+                                <i data-feather="file-text" width="20"></i>
+                                <span>Contrato VD</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  " ruinat="server" id="menuContratoB2B">
+                            <a href="Contratob2b.aspx" class='sidebar-link'>
+                                <i data-feather="file-text" width="20"></i>
+                                <span>Contrato B2B</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class="sidebar-link">
+                                <i data-feather="settings" width="20"></i>
+                                <span>Configurações</span>
+                            </a>
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="ChangePassword.aspx">Mudar Senha</a>
+                                </li>
+                                <li>
+                                    <a href="Usuarios.aspx" runat="server" id="MenuAdm1" visible="false">Usuários</a>
+                                </li>
+                                <li>
+                                    <a href="Config.aspx" runat="server" id="MenuAdm2" visible="false">Modelos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  ">
+                            <a href="Login.aspx" class='sidebar-link'>
+                                <i data-feather="log-out" width="20"></i>
+                                <span>Sair</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        
+      <div id="main">
+        <nav class="navbar navbar-header navbar-expand navbar-light">
+            <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
+            <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
