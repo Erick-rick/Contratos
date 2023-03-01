@@ -103,7 +103,7 @@
                     <div class="col-md-4 col-12">
                       <div class="form-group">
                         <label for="email-id-column">Número</label>
-                        <input type="text" min="1" id="numero" class="form-control" name="email-id-column" placeholder="Número" required>
+                        <input type="text" min="1" id="numero" class="form-control" name="numero" placeholder="Número" required>
                       </div>
                     </div>
 
@@ -112,25 +112,25 @@
                     <div class="col-md-3 col-12">
                       <div class="form-group">
                         <label for="email-id-column">Bairro</label>
-                        <input type="text" id="bairro" class="form-control" name="email-id-column" placeholder="Bairro" required>
+                        <input type="text" id="bairro" class="form-control" name="bairro" placeholder="Bairro" required>
                       </div>
                     </div>
                     <div class="col-md-3 col-12">
                       <div class="form-group">
                         <label for="email-id-colunm">Complemento</label>
-                        <input type="text" id="complemento" class="form-control" name="email-id-colum" placeholder="Complemento" />
+                        <input type="text" id="complemento" class="form-control" name="complemento" placeholder="Complemento" />
                       </div>
                     </div>
                     <div class="col-md-3 col-12">
                       <div class="form-group">
                         <label for="email-id-column">Cidade</label>
-                        <input type="text" id="cidade" class="form-control" name="email-id-column" placeholder="Cidade" required>
+                        <input type="text" id="cidade" class="form-control" name="cidade" placeholder="Cidade" required>
                       </div>
                     </div>
                     <div class="col-md-3 col-12">
                       <div class="form-group">
                         <label for="email-id-column">Estado</label>
-                        <input type="text" id="estado" class="form-control" name="email-id-column" placeholder="Estado" required>
+                        <input type="text" id="estado" class="form-control" name="estado" placeholder="Estado" required>
                       </div>
                     </div>
                   </div>
@@ -153,7 +153,7 @@
                     <div class="col-md-12 col-12">
                       <div class="form-group">
                         <label for="first-name-column">Veículo</label>
-                        <select ID="ddlModels" CssClass="form-control">
+                        <select id="modeloVeiculo" name="modeloVeiculo" CssClass="form-control">
                           <option> teste 1 </option>
                           <option> teste 1 </option>
                           <option> teste 1 </option>
@@ -168,21 +168,19 @@
                     <div class="col-md-3 col-12">
                       <div class="form-group">
                         <label for="first-name-column">Ano</label>
-                        <input type="number" id="txbAno" class="form-control" min="2020" max="2100"
-                          step="1" placeholder="Ano" name="fname-column">
+                        <input type="number" id="anoVeiculo" class="form-control" min="2020" max="2100" step="1" placeholder="Ano" name="anoVeiculo">
                       </div>
                     </div>
                     <div class="col-md-3 col-12">
                       <div class="form-group">
                         <label for="last-name-column">Modelo</label>
-                        <input type="number" id="txbModelo" class="form-control" min="2020" max="2100"
-                          step="1" placeholder="Ano" name="fname-column">
+                        <input type="number" id="modeloVeiculo" class="form-control" min="2020" max="2100" step="1" placeholder="Ano" name="modeloVeiculo">
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
                       <div class="form-group">
                         <label for="city-column">Cor</label>
-                        <input type="text" id="txbCor" class="form-control" placeholder="Cor" name="lname-column" required>
+                        <input type="text" id="corVeiculo" class="form-control" placeholder="Cor" name="corVeiculo" required>
                       </div>
                     </div>
                   </div>
@@ -190,8 +188,7 @@
                     <div class="col-md-12 col-12">
                       <div class="form-group">
                         <label for="company-column">Opcionais</label>
-                        <input type="text" id="txbOpcional" class="form-control" name="company-column"
-                          placeholder="Opcional - Separe os opcionais por ; (ponto e virgula)" />
+                        <input type="text" id="opcional" class="form-control" name="opcionais" placeholder="Opcional - Separe os opcionais por ; (ponto e virgula)" />
                       </div>
                     </div>
                   </div>
@@ -199,8 +196,7 @@
                     <div class="col-md-12 col-12">
                       <div class="form-group">
                         <label for="company-column">Cortesias</label>
-                        <input type="text" id="txbCortesia" class="form-control" name="company-column"
-                          placeholder="Cortesia - Separe as cortesias por ; (ponto e virgula)" />
+                        <input type="text" id="cortesia" class="form-control" name="cortesia" placeholder="Cortesia - Separe as cortesias por ; (ponto e virgula)" />
                       </div>
                     </div>
                   </div>
@@ -208,7 +204,7 @@
                     <div class="col-md-12 col-12">
                       <div class="form-group">
                         <label for="company-column">Observações</label>
-                        <input type="text" id="txbObs" class="form-control" name="company-column" placeholder="Obs..." />
+                        <input type="text" id="obs" class="form-control" name="obs" placeholder="Obs..." />
                       </div>
                     </div>
                   </div>
@@ -216,8 +212,7 @@
                     <div class="col-md-12 col-12">
                       <div class="form-group">
                         <label for="email-id-column">Prazo de Entrega</label>
-                        <input type="number" id="txbPrazo" class="form-control" name="email-id-column"
-                          placeholder="Prazo de Entrega" value="90" required>
+                        <input type="number" id="prazoEntrega" class="form-control" name="prazoEntrega" placeholder="Prazo de Entrega" value="90" required>
                       </div>
                     </div>
                   </div>
@@ -240,15 +235,15 @@
                     <div class="col-md-6 col-12">
                       <div class="form-group">
                         <label for="first-name-column">Valor do Veículo (R$)</label>
-                        <input type="text" id="txbValorVeiculo" class="form-control" placeholder="Valor do Veículo" name="fname-column"
+                        <input type="text" id="valorVeiculo" class="form-control" placeholder="Valor do Veículo" name="valorVeiculo"
                           onkeypress="return(moeda(this,'.',',',event))" required>
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
                       <div class="form-group">
                         <label for="first-name-column">Sinal à Vista (R$)</label>
-                        <input type="text" id="txbSinal" class="form-control" placeholder="Sinal"
-                          name="fname-column" onkeypress="return(moeda(this,'.',',',event))" required>
+                        <input type="text" id="sinal" class="form-control" placeholder="Sinal"
+                          name="sinal" onkeypress="return(moeda(this,'.',',',event))" required>
                       </div>
                     </div>
                   </div>
@@ -257,8 +252,7 @@
                     <div class="col-md-12 col-12">
                       <div class="form-group">
                         <label for="email-id-column">Valor dos Tributos incidentes sobre a comercialização do veículo (R$)</label>
-                        <input type="number" id="txbValorTributos" class="form-control"
-                          name="email-id-column"
+                        <input type="number" id="valorTributos" class="form-control" name="valorTributos"
                           placeholder="Valor dos Tributos incidentes sobre a comercialização do veículo (R$)"
                           onkeypress="return(moeda(this,'.',',',event))" value="0">
                       </div>
@@ -269,20 +263,20 @@
                     <div class="col-md-4 col-12">
                       <div class="form-group">
                         <label for="first-name-column">Veículo Seminovo - Placa</label>
-                        <input type="text" id="txbVeiculoSeminovo" class="form-control" placeholder="Placa" name="fname-column">
+                        <input type="text" id="veiculoSeminovo" class="form-control" placeholder="Placa" name="veiculoSeminovo">
                       </div>
                     </div>
                     <div class="col-md-4 col-12">
                       <div class="form-group">
                         <label for="first-name-column">Avaliação (R$)</label>
-                        <input type="text" id="txbAvaliacao" class="form-control" placeholder="Avaliação"
-                          name="fname-column" onkeypress="return(moeda(this,'.',',',event))">
+                        <input type="text" id="avaliacao" class="form-control" placeholder="Avaliação"
+                          name="avaliacao" onkeypress="return(moeda(this,'.',',',event))">
                       </div>
                     </div>
                     <div class="col-md-4 col-12">
                       <div class="form-group">
                         <label for="first-name-column">Data Avaliação</label>
-                        <input type="date" id="txbDataAvaliacao" class="form-control" placeholder="Sinal" name="fname-column">
+                        <input type="date" id="dataAvaliacao" class="form-control" placeholder="Sinal" name="dataAvaliacao">
                       </div>
                     </div>
                   </div>
@@ -291,7 +285,7 @@
                     <div class="col-md-12 col-12">
                       <div class="form-group">
                         <label for="first-name-column">Loja</label>
-                        <select name="txbLoja" id="txbLoja" class="form-control">
+                        <select name="loja" id="loja" class="form-control">
                           <option selected>Automax - Raja Gabaglia, 2222 - Estoril, BH - MG</option>
                           <option>Automax - Padre Pedro Evangelista, 44 - Coração Eucarístico, BH - MG</option>
                           <option>Automax - Barão Homem de Melo, 4350 - Estoril, BH - MG</option>
@@ -373,7 +367,7 @@
             </div>
             <div class="row text-center">
               <div class="col-md-12 col-12">
-                <button ID="btnContrato" text="Gerar Contrato" class="btn btn-primary w-100" onclick="salve()">Gerar Contrato</button>
+                <input ID="btnContrato" text="Gerar Contrato" class="btn btn-primary w-100" value="Gerar Contrato">Gerar</input>
               </div>
             </div>
           </div>

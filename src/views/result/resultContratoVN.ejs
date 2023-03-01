@@ -56,71 +56,71 @@
                 <br />
                 <p class="fs-4"><strong>CONTRATO DE COMPRA DE VEÍCULOS NOVOS</strong></p>
                 <p>1 - Cliente:
-                    <label  ID="lbCliente" Text=" - "></label>
+                    <label  ID="lbCliente" Text=" - "><%= cliente %></label>
                 </p>
                 <div class="row">
                     <div class="col">
                         <p>RG/INSCRIÇÃO ESTADUAL:
-                            <label  ID="Rg" Text=" - "><%= contrato.rg %></label>
+                            <label  ID="RG" Text=" - "><%= rg %></label>
                         </p>
                     </div>
                     <div class="col">
                         <p>CPF/CNPJ:
-                            <label  ID="lbCpf" Text=" - "></label>
+                            <label ID="CPF_CNPJ" Text=" - "><%= cpfCnpj %></label>
                         </p>
                     </div>
                 </div>
                 <p>Endereço:
-                    <label  ID="lbEndereco" Text=" - "></label>
+                    <label  ID="endereco" Text=" - "><%= endereco %></label>
                 </p>
                 <div class="row">
                     <div class="col">
                         <p>Telefone:
-                            <label  ID="lbTelefone" Text=" - "></label>
+                            <label  ID="telefone" Text=" - "><%= telefone></label>
                         </p>
                     </div>
                     <div class="col">
                         <p>Email:
-                            <label  ID="lbEmail" Text=" - "></label>
+                            <label  ID="email" Text=" - "><%= email %></label>
                         </p>
                     </div>
                 </div>
                 <p>Vendedor:
-                    <label  ID="lbVendedor" Text=" - "></label>
+                    <label  ID="vendedor" Text=" - "><%= vendedor%></label>
                 </p>
 
                 <hr />
                 <p>2 - Descrição do Veículo</p>
                 <p>Veículo:
-                    <label  ID="lbVeiculo" Text=" - "></label>
+                    <label  id="Modeloveiculo" Text=" - "><%= modeloVeiculo %></label>
                 </p>
                 <div class="row">
                     <div class="col">
                         <p>Ano/Modelo:
-                            <label  ID="lbAnoModelo" Text=" - "></label>
+                            <label  ID="anoModelo" Text=" - "><%= anoModelo %></label>
                         </p>
                     </div>
                     <div class="col">
                         <p>Cor:
-                            <label  ID="lbCor" Text=" - "></label>
+                            <label  ID="corVeiculo" Text=" - "><%= corVeiculo %></label>
                         </p>
                     </div>
                 </div>
                 <p>Opcional:
-                    <label  ID="lbOpc" Text=" - "></label>
+                    <label  ID="opcional" Text=" - "><%= opcional %></label>
                 </p>
                 <p>Cortesia:
-                    <label  ID="lbCortesia" Text=" - "></label>
+                    <label  ID="cortesia" Text=" - "><%= cortesia %></label>
                 </p>
                 <p>Observação:
-                    <label  ID="lbObs" Text=" - "></label>
+                    <label  ID="obs" Text=" - "><%= obs %></label>
                 </p>
                 <hr />
                 <p>3 - Características do Veículo Informado na Negociação.</p>
                 <p>3.1 - Comprador ciente da disponibilidade de uma unidade junto ao Fabricante que será solicitadapela
                     concessionária somente após o sinal de compra e assinatura do respectivo contrato.</p>
                 <p>3.2 - Prazo previsto de entrega:
-                    <label  ID="lbPrazo" Text=" - " Visible="false"></label>acima de 90 dias, após
+                    <label  ID="prazoEntrega" Text=" - " Visible="false"><%= prazoEntrega %></label>acima de 90 dias, após
                     comprovação de todos os os pagamentos que compõem o preço do veículo (sinal, pagto à vista,
                     financiamento de agentes bancários e/ou consórcios).
                 </p>
@@ -140,15 +140,15 @@
                     termo aditivo ao presente contrato com relação a(s) alteração(oes) requeridas pelo comprador.</p>
                 <p>4 - Condições de Pagamento</p>
                 <p>4.1 - Valor do Veículo: R$
-                    <label  ID="lbValorVeiculo" Text=" - "></label>
+                    <label  ID="valorVeiculo" Text=" - "><%= valorVeiculo %></label>
                 </p>
                 <p>4.2 - Sinal á Vista: R$
-                    <label  ID="lbSinal" Text=" - "></label>
+                    <label  ID="sinal" Text=" - "><%= sinal %></label>
                 </p>
                 <p>4.3 - Sinal veículo seminovo - Placa
-                    <label  ID="lbPlacaSeminovo" Text=" - "></label>, avaliado em R$
-                    <label  ID="lbValorSeminovo" Text=" - "></label>, data avaliação
-                    <label  ID="lbDataAvaliacao" Text=" - "></label>
+                    <label  ID="lbPlacaSeminovo" Text=" - "><%= veiculoSeminovo %></label>, avaliado em R$
+                    <label  ID="lbValorSeminovo" Text=" - "> <%= avaliacao %></label>, data avaliação
+                    <label  ID="lbDataAvaliacao" Text=" - "><%= dataAvaliacao %></label>
                     aceitação do veículo seminovo como parte de pagamento do negócio somente será confirmada após
                     observadas condições disposto na cláusula 5.8 deste instrumento.
                 </p>
@@ -300,7 +300,7 @@
     <script src="../../assets/js/app.js"></script>
 
     <script src="../../assets/js/main.js"></script>
-    
+
     <script type="text/javascript">
         /* Máscaras ER */
         function mascara(o, f) {
