@@ -1,14 +1,11 @@
 const express = require('express');
 const route = express.Router();
 const homeController = require('./src/controllers/homeController');
-const loginController = require('./src/controllers/loginController');
-const contratoController = require('./src/controllers/contratoController');
-
-
+//const loginController = require('./src/controllers/loginController');
+//const contratoController = require('./src/controllers/contratoController');
 
 // Rotas da home
 route.get('/', homeController.paginaInicial);
-route.post('/', homeController.trataPost);
 
 // Rotas de Login
 //route.post('/login/register', loginController.register);
@@ -17,8 +14,8 @@ route.post('/', homeController.trataPost);
 //route.get('/contratoVD/index', contratoController.contratoVD);
 
 // Rota para exibir o formulário
-
-route.get('/index', (req, res) => {
+/*
+route.get('/', (req, res) => {
     res.render('form');
 });
   
@@ -55,6 +52,6 @@ route.post('/result/resultContratoVN', (req, res) => {
                 cortesia, obs, prazoEntrega, valorVeiculo, sinal, valorTributos, veiculoSeminovo, avaliacao, loja });
 });
 
-
+*/
 
 module.exports = route;

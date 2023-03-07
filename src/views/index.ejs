@@ -21,7 +21,7 @@
 
       <section id="multiple-column-form">
       
-        <form method="POST" action="/contrato">
+      <form action="/resultContratoVN" method="POST">
 
         <!--Vendedor-->
         <div class="row match-height">
@@ -32,8 +32,8 @@
                   <div class="row">
                     <div class="col-md-12 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">Vendedor</label>
-                        <input type="text" id="vendedor" class="form-control" placeholder="Vendedor" name="vendedor">
+                        <label for="vendedor">Vendedor</label>
+                        <input type="text" id="vendedor" name="vendedor" class="form-control" placeholder="Vendedor" >
                       </div>
                     </div>
                   </div>
@@ -55,7 +55,7 @@
                   <div class="row">
                     <div class="col-md-12 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">Cliente</label>
+                        <label for="nomeCliente">Cliente</label>
                         <input type="text" id="nomeCliente" name="nomeCliente" class="form-control" placeholder="Cliente" required>
                       </div>
                     </div>
@@ -64,25 +64,25 @@
                   <div class="row">
                     <div class="col-md-6 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">RG/INSCRIÇÃO ESTADUAL</label>
+                        <label for="RG">RG/INSCRIÇÃO ESTADUAL</label>
                         <input type="text" id="RG" class="form-control" placeholder="RG" name="RG" required>
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
                       <div class="form-group">
-                        <label for="last-name-column">CPF/CNPJ</label>
-                        <input type="text" id="CPF_CNPJ" class="form-control" name="CPF_CNPJ" onfocus="retirarFormatacao(this);" onblur="formatarCampo(this);" maxlength="14" placeholder="CPF/CNPJ" required />
+                        <label for="CPF_CNPJ">CPF/CNPJ</label>
+                        <input type="text" id="CPF_CNPJ" class="form-control" name="CPF_CNPJ"  maxlength="14" placeholder="CPF/CNPJ" required />
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
                       <div class="form-group">
-                        <label for="city-column">Telefone</label>
+                        <label for="telefone">Telefone</label>
                         <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Telefone" maxlength="15" required />
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
                       <div class="form-group">
-                        <label for="company-column">Email</label>
+                        <label for="email">Email</label>
                         <input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
                       </div>
                     </div>
@@ -90,20 +90,20 @@
                   <div class="row">
                     <div class="col-md-3 col-12">
                       <div class="form-group">
-                        <label for="email-id-colunm">CEP</label>
-                        <input name="cep" type="text" id="cep" class="mascCEP form-control" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="CEP" required />
+                        <label for="cep">CEP</label>
+                        <input name="cep" type="text" id="cep" class="mascCEP form-control" value="" size="10" maxlength="9" placeholder="CEP" required />
                       </div>
                     </div>
                     <div class="col-md-5 col-12">
                       <div class="form-group">
-                        <label for="email-id-column">Endereço</label>
+                        <label for="endereco">Endereço</label>
                         <input type="text" id="endereco" class="form-control" name="endereco" placeholder="Endereço" required>
                       </div>
                     </div>
                     <div class="col-md-4 col-12">
                       <div class="form-group">
-                        <label for="email-id-column">Número</label>
-                        <input type="text" min="1" id="numero" class="form-control" name="numero" placeholder="Número" required>
+                        <label for="numero">Número</label>
+                        <input type="text" min="1" id="numero" name="numero" class="form-control"  placeholder="Número" required>
                       </div>
                     </div>
 
@@ -111,26 +111,26 @@
                   <div class="row">
                     <div class="col-md-3 col-12">
                       <div class="form-group">
-                        <label for="email-id-column">Bairro</label>
-                        <input type="text" id="bairro" class="form-control" name="bairro" placeholder="Bairro" required>
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro"  name="bairro" class="form-control" placeholder="Bairro" required>
                       </div>
                     </div>
                     <div class="col-md-3 col-12">
                       <div class="form-group">
-                        <label for="email-id-colunm">Complemento</label>
-                        <input type="text" id="complemento" class="form-control" name="complemento" placeholder="Complemento" />
+                        <label for="complemento">Complemento</label>
+                        <input type="text" id="complemento" name="complemento" class="form-control"  placeholder="Complemento" />
                       </div>
                     </div>
                     <div class="col-md-3 col-12">
                       <div class="form-group">
-                        <label for="email-id-column">Cidade</label>
-                        <input type="text" id="cidade" class="form-control" name="cidade" placeholder="Cidade" required>
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade"  name="cidade" class="form-control" placeholder="Cidade" required>
                       </div>
                     </div>
                     <div class="col-md-3 col-12">
                       <div class="form-group">
-                        <label for="email-id-column">Estado</label>
-                        <input type="text" id="estado" class="form-control" name="estado" placeholder="Estado" required>
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" name="estado" class="form-control"  placeholder="Estado" required>
                       </div>
                     </div>
                   </div>
@@ -152,7 +152,7 @@
                   <div class="row">
                     <div class="col-md-12 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">Veículo</label>
+                        <label for="modeloVeiculo">Veículo</label>
                         <select id="modeloVeiculo" name="modeloVeiculo" CssClass="form-control">
                           <option> teste 1 </option>
                           <option> teste 1 </option>
@@ -167,27 +167,27 @@
                   <div class="row">
                     <div class="col-md-3 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">Ano</label>
-                        <input type="number" id="anoVeiculo" class="form-control" min="2020" max="2100" step="1" placeholder="Ano" name="anoVeiculo">
+                        <label for="anoVeiculo">Ano</label>
+                        <input type="number" id="anoVeiculo" name="anoVeiculo" class="form-control" min="2020" max="2100" step="1" placeholder="Ano" >
                       </div>
                     </div>
                     <div class="col-md-3 col-12">
                       <div class="form-group">
-                        <label for="last-name-column">Modelo</label>
-                        <input type="number" id="modeloVeiculo" class="form-control" min="2020" max="2100" step="1" placeholder="Ano" name="modeloVeiculo">
+                        <label for="anoModelo">Modelo</label>
+                        <input type="number" id="anoModelo" name="anoModelo" class="form-control" min="2020" max="2100" step="1" placeholder="Ano" >
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
                       <div class="form-group">
-                        <label for="city-column">Cor</label>
-                        <input type="text" id="corVeiculo" class="form-control" placeholder="Cor" name="corVeiculo" required>
+                        <label for="corVeiculo">Cor</label>
+                        <input type="text" id="corVeiculo" name="corVeiculo" class="form-control" placeholder="Cor" required>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 col-12">
                       <div class="form-group">
-                        <label for="company-column">Opcionais</label>
+                        <label for="opcionais">Opcionais</label>
                         <input type="text" id="opcionais" class="form-control" name="opcionais" placeholder="Opcional - Separe os opcionais por ; (ponto e virgula)" />
                       </div>
                     </div>
@@ -195,7 +195,7 @@
                   <div class="row">
                     <div class="col-md-12 col-12">
                       <div class="form-group">
-                        <label for="company-column">Cortesias</label>
+                        <label for="cortesia">Cortesias</label>
                         <input type="text" id="cortesia" class="form-control" name="cortesia" placeholder="Cortesia - Separe as cortesias por ; (ponto e virgula)" />
                       </div>
                     </div>
@@ -203,7 +203,7 @@
                   <div class="row">
                     <div class="col-md-12 col-12">
                       <div class="form-group">
-                        <label for="company-column">Observações</label>
+                        <label for="obs">Observações</label>
                         <input type="text" id="obs" class="form-control" name="obs" placeholder="Obs..." />
                       </div>
                     </div>
@@ -211,7 +211,7 @@
                   <div class="row">
                     <div class="col-md-12 col-12">
                       <div class="form-group">
-                        <label for="email-id-column">Prazo de Entrega</label>
+                        <label for="Prazo">Prazo de Entrega</label>
                         <input type="number" id="prazoEntrega" class="form-control" name="prazoEntrega" placeholder="Prazo de Entrega" value="90" required>
                       </div>
                     </div>
@@ -234,16 +234,15 @@
                   <div class="row">
                     <div class="col-md-6 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">Valor do Veículo (R$)</label>
-                        <input type="text" id="valorVeiculo" class="form-control" placeholder="Valor do Veículo" name="valorVeiculo"
-                          onkeypress="return(moeda(this,'.',',',event))" required>
+                        <label for="valorVeiculo">Valor do Veículo (R$)</label>
+                        <input type="text" id="valorVeiculo" class="form-control" placeholder="Valor do Veículo" name="valorVeiculo" required>
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">Sinal à Vista (R$)</label>
+                        <label for="sinal">Sinal à Vista (R$)</label>
                         <input type="text" id="sinal" class="form-control" placeholder="Sinal"
-                          name="sinal" onkeypress="return(moeda(this,'.',',',event))" required>
+                          name="sinal" required>
                       </div>
                     </div>
                   </div>
@@ -251,10 +250,9 @@
                   <div class="row">
                     <div class="col-md-12 col-12">
                       <div class="form-group">
-                        <label for="email-id-column">Valor dos Tributos incidentes sobre a comercialização do veículo (R$)</label>
+                        <label for="valorTributos">Valor dos Tributos incidentes sobre a comercialização do veículo (R$)</label>
                         <input type="number" id="valorTributos" class="form-control" name="valorTributos"
-                          placeholder="Valor dos Tributos incidentes sobre a comercialização do veículo (R$)"
-                          onkeypress="return(moeda(this,'.',',',event))" value="0">
+                          placeholder="Valor dos Tributos incidentes sobre a comercialização do veículo (R$)" value="0">
                       </div>
                     </div>
                   </div>
@@ -262,20 +260,19 @@
                   <div class="row">
                     <div class="col-md-4 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">Veículo Seminovo - Placa</label>
+                        <label for="veiculoSeminovo">Veículo Seminovo - Placa</label>
                         <input type="text" id="veiculoSeminovo" class="form-control" placeholder="Placa" name="veiculoSeminovo">
                       </div>
                     </div>
                     <div class="col-md-4 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">Avaliação (R$)</label>
-                        <input type="text" id="avaliacao" class="form-control" placeholder="Avaliação"
-                          name="avaliacao" onkeypress="return(moeda(this,'.',',',event))">
+                        <label for="avaliacao">Avaliação (R$)</label>
+                        <input type="text" id="avaliacao" class="form-control" placeholder="Avaliação" name="avaliacao" >
                       </div>
                     </div>
                     <div class="col-md-4 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">Data Avaliação</label>
+                        <label for="dataAvaliacao">Data Avaliação</label>
                         <input type="date" id="dataAvaliacao" class="form-control" placeholder="Sinal" name="dataAvaliacao">
                       </div>
                     </div>
@@ -284,7 +281,7 @@
                   <div class="row">
                     <div class="col-md-12 col-12">
                       <div class="form-group">
-                        <label for="first-name-column">Loja</label>
+                        <label for="loja">Loja</label>
                         <select name="loja" id="loja" class="form-control">
                           <option selected>Automax - Raja Gabaglia, 2222 - Estoril, BH - MG</option>
                           <option>Automax - Padre Pedro Evangelista, 44 - Coração Eucarístico, BH - MG</option>
@@ -300,31 +297,31 @@
                       <div class="row mt-4">
                         <div class="form-group">
                           <input type="checkbox" />
-                          <label ID="CheckBox0" >Garantia de Procedência</label>
+                          <label id="CheckBox0" >Garantia de Procedência</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="form-group">
                           <input type="checkbox" />
-                          <label ID="CheckBox1" AutoPostBack="true"> Débito de multas e taxas anuais legalmente devidas" </label>
+                          <label id="CheckBox1" AutoPostBack="true"> Débito de multas e taxas anuais legalmente devidas" </label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="form-group">
                           <input type="checkbox"/>
-                          <label ID="CheckBox2">Débitos de impostos</label>
+                          <label id="CheckBox2">Débitos de impostos</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="form-group">
                           <input type="checkbox"/>
-                          <label ID="CheckBox3">Alienação fiduciária ou reserva de domínio</label>
+                          <label id="CheckBox3">Alienação fiduciária ou reserva de domínio</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="form-group">
                           <input type="checkbox" />
-                          <label ID="CheckBox4">Existência de qualquer outro registro que limita ou impeça a circulação do veículo?</label>
+                          <label id="CheckBox4">Existência de qualquer outro registro que limita ou impeça a circulação do veículo?</label>
                         </div>
                       </div>
 
@@ -335,7 +332,7 @@
                         <div class="col-md-6 col-12">
                           <div class="form-group">
                             <label for="first-name-column">Multas (R$)</label>
-                            <textbox runat="server" ID="txbMultas" CssClass="form-control" placecholder="Multas">
+                            <textbox runat="server" id="txbMultas" CssClass="form-control" placecholder="Multas">
                               </asp:TextBox>
                           </div>
                         </div>
@@ -367,7 +364,8 @@
             </div>
             <div class="row text-center">
               <div class="col-md-12 col-12">
-                <input ID="btnContrato" text="Gerar Contrato" class="btn btn-primary w-100" value="Gerar Contrato">Gerar</input>
+       
+                <input type="submit" id="btnContrato" text="Gerar Contrato" class="btn btn-primary w-100" value="Gerar Contrato">Gerar</input>
               </div>
             </div>
           </div>
