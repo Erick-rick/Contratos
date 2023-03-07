@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratos - Contrato Pedido Futuro </title>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <form action="">
+        <!--PAGINA 1-->
+        <div class="text-center mt-2 mb-2">
+            <img src=".assets/images/AutomaxLogo.png" class="img-fluid w-25 align-content-center" />
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col text-end">
+                <p>Belo Horizonte,
+                    <input id="dataAtual" type="text">
+
+                </p>
+            </div>
+        </div>
+        <br />
+        <p class="fs-4">
+            <strong>CONTRATO DE COMPRA DE VEÍCULOS NOVOS</strong>
+        </p>
+        <p>1 - Cliente:
+            <label id="lbCliente" Text=" - ">
+                <%= cliente %>
+            </label>
+        </p>
+
+        <div class="row">
+            <div class="col">
+                <p>RG/INSCRIÇÃO ESTADUAL:
+                    <label id="RG" Text=" - ">
+                        <%= rg %>
+                    </label>
+                </p>
+            </div>
+            <div class="col">
+                <p>CPF/CNPJ:
+                    <label id="CPF_CNPJ" Text=" - ">
+                        <%= cpfCnpj %>
+                    </label>
+                </p>
+            </div>
+        </div>
+        <p>Endereço:
+            <label id="endereco" Text=" - ">
+                <%= endereco %>
+            </label>
+        </p>
+        <div class="row">
+            <div class="col">
+                <p>Telefone:
+                    <label id="telefone" Text=" - ">
+                        <%= telefone %>
+                    </label>
+                </p>
+            </div>
+            <div class="col">
+                <p>Email:
+                    <label id="email" Text=" - ">
+                        <%= email %>
+                    </label>
+                </p>
+            </div>
+        </div>
+        <p>Vendedor:
+            <label id="vendedor" Text=" - ">
+                <%= vendedor %>
+            </label>
+        </p>
+
+        <hr />
+        
+        <p>2 - Descrição do Veículo</p>
+        <p>Veículo:
+            <label id="Modeloveiculo" Text=" - ">
+                <%= modeloVeiculo %>
+            </label>
+        </p>
+        <div class="row">
+            <div class="col">
+                <p>Ano/Modelo:
+                    <label id="anoModelo" Text=" - ">
+                        <%= anoModelo %>
+                    </label>
+                </p>
+            </div>
+            <div class="col">
+                <p>Cor:
+                    <label id="corVeiculo" Text=" - ">
+                        <%= corVeiculo %>
+                    </label>
+                </p>
+            </div>
+        </div>
+        <p>Opcional:
+            <label id="opcional" Text=" - ">
+                <%= opcional %>
+            </label>
+        </p>
+        <p>Cortesia:
+            <label id="cortesia" Text=" - ">
+                <%= cortesia %>
+            </label>
+        </p>
+        <p>Observação:
+            <label id="obs" Text=" - ">
+                <%= obs %>
+            </label>
+        </p>
+        <hr />
+        <p>3 - Características do Veículo Informado na Negociação.</p>
+        <p>3.1 - Comprador ciente da disponibilidade de uma unidade junto ao Fabricante que será solicitadapela
+            concessionária somente após o sinal de compra e assinatura do respectivo contrato.</p>
+        <p>3.2 - Prazo previsto de entrega:
+            <label id="prazoEntrega" Text=" - " Visible="false">
+                <%= prazoEntrega %>
+            </label>acima de 90 dias, após
+            comprovação de todos os os pagamentos que compõem o preço do veículo (sinal, pagto à vista,
+            financiamento de agentes bancários e/ou consórcios).
+        </p>
+        <p>3.3 - O(s) preço(s) do(s) veículo(s) estão sujeitos à alteração(ões), conforme tabela do valor do(s)
+            veículo(s) à época do faturamento.</p>
+        <p>3.4 - Fica ciente o comprador que o fabricante poderá alterar o modelo do veículo escolhido , bem
+            como , alterar os itens de série do veículo, entre a data da compra e a data da entrega do veículo ,
+            ficando a cargo do comprador o ônus destas mudanças.</p>
+
+        <div style="break-after: page"></div>
+
+    </form>
+</body>
+
+<script>
+    var data = new Date();
+
+    var dia = String(data.getDate()).padStart(2, '0');
+
+    var mes = String(data.getMonth() + 1).padStart(2, '0');
+
+    var ano = data.getFullYear();
+
+    dataAtual = dia + '/' + mes + '/' + ano;
+
+    document.getElementById("dataAtual").value = dataAtual
+
+</script>
+
+</html>
