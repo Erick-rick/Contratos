@@ -26,6 +26,11 @@ app.get('/main', (req, res) => {
   res.render('main');
 });
 
+app.get('/newContrato', (req, res) => {
+  res.render('newContrato');
+});
+
+
 app.post('/contrato', (req, res) => {
   const vendedor = req.body.vendedor;
   const nome = req.body.nome;
@@ -44,7 +49,9 @@ app.post('/viewContratoVN',(req, res) => {
     const RG = req.body.rg;
     const CPF_CNPJ = req.body.CPF_CNPJ;
     const telefone = req.body.telefone;
+    const email = req.body.email;
     const cep = req.body.cep;
+    const endereco = req.body.endereco;
     const numero = req.body.numero;
     const bairro = req.body.bairro;
     const complemento = req.body.complemento;
@@ -52,6 +59,7 @@ app.post('/viewContratoVN',(req, res) => {
     const estado = req.body.estado;
 
     const modeloVeiculo = req.body.modeloVeiculo;
+    const anoModelo = req.body.anoModelo;
     const corVeiculo = req.body.corVeiculo;
     const opcionais = req.body.opcionais;
     const cortesia = req.body.cortesia;
@@ -64,8 +72,8 @@ app.post('/viewContratoVN',(req, res) => {
     const avaliacao = req.body.avaliacao;
     const loja = req.body.loja;
 
-  res.render('viewContratoVN',  { vendedor, nomeCliente, endereco, dataNascimento, RG, CPF_CNPJ, telefone, cep,
-    numero, bairro, complemento, cidade, estado, modeloVeiculo, corVeiculo, opcionais, 
+  res.render('viewContratoVN',  { vendedor, nomeCliente, endereco, dataNascimento, RG, CPF_CNPJ, telefone, email, cep,
+    numero, bairro, complemento, cidade, estado, modeloVeiculo, corVeiculo, opcionais, anoModelo, 
     cortesia, obs, prazoEntrega, valorVeiculo, sinal, valorTributos, veiculoSeminovo, avaliacao, loja });
 })
 
@@ -77,6 +85,8 @@ app.post('/resultContratoVN', (req, res) => {
     const CPF_CNPJ = req.body.CPF_CNPJ;
     const telefone = req.body.telefone;
     const cep = req.body.cep;
+    const endereco = req.body.endereco;
+
     const numero = req.body.numero;
     const bairro = req.body.bairro;
     const complemento = req.body.complemento;
