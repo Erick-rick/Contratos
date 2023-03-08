@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
             <div class="col"></div>
             <div class="col text-end">
                 <p>Belo Horizonte,
-                    <input id="dataAtual" type="text">
+                    <h3 id="dataAtual">()</h3>
 
                 </p>
             </div>
@@ -148,7 +148,7 @@
 
     dataAtual = dia + '/' + mes + '/' + ano;
 
-    document.getElementById("dataAtual").value = dataAtual
+    document.getElementById('dataAtual').innerHTML = dataAtual;
 
 </script>
 
