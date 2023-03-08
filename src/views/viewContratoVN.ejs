@@ -1,18 +1,27 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contratos - Contrato Pedido Futuro </title>
-</head>
+<%- include('includes/head') %>
 
 <body class="d-flex flex-column h-100">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+    
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
     <form action="">
         <!--PAGINA 1-->
         <div class="text-center mt-2 mb-2">
-            <img src=".assets/images/AutomaxLogo.png" class="img-fluid w-25 align-content-center" />
+            <img src="./assets/images/AutomaxLogo.png" class="img-fluid w-25 align-content-center" />
         </div>
         <div class="row">
             <div class="col"></div>
@@ -24,10 +33,9 @@
             </div>
         </div>
         <br />
-        <p class="fs-4">
-            <strong>CONTRATO DE COMPRA DE VEÍCULOS NOVOS</strong>
-        </p>
-        <p>1 - Cliente:
+        <p class="fs-4"><strong>CONTRATO DE COMPRA DE VEÍCULOS NOVOS</strong></p>
+        <p class="fs-6"><strong>1 - Dados do Cliente</p></strong>
+        <p>Nome:
             <label id="lbCliente" Text=" - ">
                 <%= nomeCliente %>
             </label>
@@ -36,9 +44,7 @@
         <div class="row">
             <div class="col">
                 <p>RG/INSCRIÇÃO ESTADUAL:
-                    <label id="RG" Text=" - ">
-                        <%= RG %>
-                    </label>
+                    <label id="RG" Text=" - "><%= RG %></label>
                 </p>
             </div>
             <div class="col">
@@ -78,7 +84,7 @@
 
         <hr />
         
-        <p>2 - Descrição do Veículo</p>
+        <p class="fs-6"><strong>2 - Descrição do Veículo</p></strong>
         <p>Veículo:
             <label id="Modeloveiculo" Text=" - ">
                 <%= modeloVeiculo %>
@@ -102,7 +108,7 @@
         </div>
         <p>Opcional:
             <label id="opcional" Text=" - ">
-                <%= opcional %>
+                <%= opcionais %>
             </label>
         </p>
         <p>Cortesia:
@@ -116,7 +122,8 @@
             </label>
         </p>
         <hr />
-        <p>3 - Características do Veículo Informado na Negociação.</p>
+        <p class="fs-6"><strong>3 - Características do Veículo Informado na Negociação.</p></strong>
+
         <p>3.1 - Comprador ciente da disponibilidade de uma unidade junto ao Fabricante que será solicitadapela
             concessionária somente após o sinal de compra e assinatura do respectivo contrato.</p>
         <p>3.2 - Prazo previsto de entrega:
@@ -150,6 +157,8 @@
 
     document.getElementById('dataAtual').innerHTML = dataAtual;
 
+    
 </script>
 
-</html>
+
+<%- include('includes/footer') %>
