@@ -139,6 +139,189 @@
         </div>
       </div>
 
+        <!--Dados do Veiculo -->
+        <div class="row match-height">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">Dados do Veículo</h4>
+                </div>
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12 col-12">
+                        <div class="form-group">
+                          <label for="modeloVeiculo">Veículo</label>
+                          <select id="modeloVeiculo" name="modeloVeiculo" CssClass="form-control">
+                            <option> teste 1 </option>
+                            <option> teste 1 </option>
+                            <option> teste 1 </option>
+                          </select>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3 col-12">
+                        <div class="form-group">
+                          <label for="anoVeiculo">Ano</label>
+                          <input type="number" id="anoVeiculo" name="anoVeiculo" class="form-control" min="2020" max="2100" step="1" placeholder="Ano" >
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-12">
+                        <div class="form-group">
+                          <label for="anoModelo">Modelo</label>
+                          <input type="number" id="anoModelo" name="anoModelo" class="form-control" min="2020" max="2100" step="1" placeholder="Ano" >
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12">
+                        <div class="form-group">
+                          <label for="corVeiculo">Cor</label>
+                          <input type="text" id="corVeiculo" name="corVeiculo" class="form-control" placeholder="Cor" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 col-12">
+                        <div class="form-group">
+                          <label for="opcionais">Opcionais</label>
+                          <input type="text" id="opcionais" class="form-control" name="opcionais" placeholder="Opcional - Separe os opcionais por ; (ponto e virgula)" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 col-12">
+                        <div class="form-group">
+                          <label for="cortesia">Cortesias</label>
+                          <input type="text" id="cortesia" class="form-control" name="cortesia" placeholder="Cortesia - Separe as cortesias por ; (ponto e virgula)" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 col-12">
+                        <div class="form-group">
+                          <label for="obs">Observações</label>
+                          <input type="text" id="obs" class="form-control" name="obs" placeholder="Obs..." />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 col-12">
+                        <div class="form-group">
+                          <label for="Prazo">Prazo de Entrega</label>
+                          <input type="number" id="prazoEntrega" class="form-control" name="prazoEntrega" placeholder="Prazo de Entrega" value="90" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+                <!--Dados de Pagamento -->
+        <div class="row match-height">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">Dados do Pagamento</h4>
+                </div>
+                <div class="card-content">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6 col-12">
+                        <div class="form-group">
+                          <label for="valorVeiculo">Valor do Veículo (R$)</label>
+                          <input type="text" id="valorVeiculo" class="form-control" placeholder="Valor do Veículo" name="valorVeiculo" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12">
+                        <div class="form-group">
+                          <label for="sinal">Sinal à Vista (R$)</label>
+                          <input type="text" id="sinal" class="form-control" placeholder="Sinal"
+                            name="sinal" required>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-md-12 col-12">
+                        <div class="form-group">
+                          <label for="valorTributos">Valor dos Tributos incidentes sobre a comercialização do veículo (R$)</label>
+                          <input type="number" id="valorTributos" class="form-control" name="valorTributos"
+                            placeholder="Valor dos Tributos incidentes sobre a comercialização do veículo (R$)" value="0">
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-md-4 col-12">
+                        <div class="form-group">
+                          <label for="veiculoSeminovo">Veículo Seminovo - Placa</label>
+                          <input type="text" id="veiculoSeminovo" class="form-control" placeholder="Placa" name="veiculoSeminovo">
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-12">
+                        <div class="form-group">
+                          <label for="avaliacao">Avaliação (R$)</label>
+                          <input type="text" id="avaliacao" class="form-control" placeholder="Avaliação" name="avaliacao" >
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-12">
+                        <div class="form-group">
+                          <label for="dataAvaliacao">Data Avaliação</label>
+                          <input type="date" id="dataAvaliacao" class="form-control" placeholder="Sinal" name="dataAvaliacao">
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-md-12 col-12">
+                        <div class="form-group">
+                          <label for="loja">Loja</label>
+                          <select name="loja" id="loja" class="form-control">
+                            <option selected>Automax - Raja Gabaglia, 2222 - Estoril, BH - MG</option>
+                            <option>Automax - Padre Pedro Evangelista, 44 - Coração Eucarístico, BH - MG</option>
+                            <option>Automax - Barão Homem de Melo, 4350 - Estoril, BH - MG</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#" id="foo"></a>
+                    <div class="row mt-2">
+                      <div class="col-md-12 col-12">
+                        <strong>Situação de regularidade do veículo quanto a:</strong>
+                        <div class="row mt-4">
+                          <div class="form-group">
+                            <input type="checkbox" />
+                            <label id="CheckBox0" >Garantia de Procedência</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group">
+                            <input type="checkbox" />
+                            <label id="CheckBox1" AutoPostBack="true"> Débito de multas e taxas anuais legalmente devidas" </label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group">
+                            <input type="checkbox"/>
+                            <label id="CheckBox2">Débitos de impostos</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group">
+                            <input type="checkbox"/>
+                            <label id="CheckBox3">Alienação fiduciária ou reserva de domínio</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group">
+                            <input type="checkbox" />
+                            <label id="CheckBox4">Existência de qualquer outro registro que limita ou impeça a circulação do veículo?</label>
+                          </div>
+                        </div>
+  
 
       <div class="row text-center">
         <div class="col-md-12 col-12">

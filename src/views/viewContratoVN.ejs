@@ -1,164 +1,319 @@
 <%- include('includes/head') %>
 
-<body class="d-flex flex-column h-100">
+    <body class="d-flex flex-column h-100">
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-    
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
             }
-        }
-    </style>
 
-    <form action="">
-        <!--PAGINA 1-->
-        <div class="text-center mt-2 mb-2">
-            <img src="./assets/images/AutomaxLogo.png" class="img-fluid w-25 align-content-center" />
-        </div>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col text-end">
-                <p>Belo Horizonte,
-                    <h3 id="dataAtual">()</h3>
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
 
-                </p>
+        <form action="">
+            <!--PAGINA 1-->
+            <div class="text-center mt-2 mb-2">
+                <img src="./assets/images/AutomaxLogo.png" class="img-fluid w-25 align-content-center" />
             </div>
-        </div>
-        <br />
-        <p class="fs-4"><strong>CONTRATO DE COMPRA DE VEÍCULOS NOVOS</strong></p>
-        <p class="fs-6"><strong>1 - Dados do Cliente</p></strong>
-        <p>Nome:
-            <label id="lbCliente" Text=" - ">
-                <%= nomeCliente %>
-            </label>
-        </p>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col text-end">
+                    <p>Belo Horizonte,
+                    <h4 id="dataAtual">()</h4>
 
-        <div class="row">
-            <div class="col">
-                <p>RG/INSCRIÇÃO ESTADUAL:
-                    <label id="RG" Text=" - "><%= RG %></label>
-                </p>
+                    </p>
+                </div>
             </div>
-            <div class="col">
-                <p>CPF/CNPJ:
-                    <label id="CPF_CNPJ" Text=" - ">
-                        <%= CPF_CNPJ %>
-                    </label>
-                </p>
+            <br />
+            <p class="fs-4"><strong>CONTRATO DE COMPRA DE VEÍCULOS NOVOS</strong></p>
+            <p class="fs-6"><strong>1 - Dados do Cliente</p></strong>
+
+            <p>Nome: <%= nomeCliente %>
+            </p>
+
+            <div class="row">
+                <div class="col">
+                    <p>Rg/Inscrição estadual: <%= RG %> </p>
+                </div>
+                <div class="col">
+                    <p>CPF/CNPJ: <%= CPF_CNPJ %> </p>
+                </div>
             </div>
-        </div>
-        <p>Endereço:
-            <label id="endereco" Text=" - ">
-                <%= endereco %>
-            </label>
-        </p>
-        <div class="row">
-            <div class="col">
-                <p>Telefone:
-                    <label id="telefone" Text=" - ">
-                        <%= telefone %>
-                    </label>
-                </p>
+            <p>Endereço: <%= endereco %></p>
+            <div class="row">
+                <div class="col">
+                    <p>Telefone: <%= telefone %></p>
+                </div>
+                <div class="col">
+                    <p>Email: <%= email %> </p>
+                </div>
             </div>
-            <div class="col">
-                <p>Email:
-                    <label id="email" Text=" - ">
-                        <%= email %>
-                    </label>
-                </p>
+            <p>Vendedor: <%= vendedor %>
+            </p>
+
+            <hr />
+
+            <p class="fs-6"><strong>2 - Descrição do Veículo</p></strong>
+            <p>Veículo:
+                <label id="Modeloveiculo" Text=" - ">
+                    <%= modeloVeiculo %>
+                </label>
+            </p>
+            <div class="row">
+                <div class="col">
+                    <p>Ano/Modelo:
+                        <label id="anoModelo" Text=" - ">
+                            <%= anoModelo %>
+                        </label>
+                    </p>
+                </div>
+                <div class="col">
+                    <p>Cor:
+                        <label id="corVeiculo" Text=" - ">
+                            <%= corVeiculo %>
+                        </label>
+                    </p>
+                </div>
             </div>
-        </div>
-        <p>Vendedor:
-            <label id="vendedor" Text=" - ">
-                <%= vendedor %>
-            </label>
-        </p>
+            <p>Opcional:
+                <label id="opcional" Text=" - ">
+                    <%= opcionais %>
+                </label>
+            </p>
+            <p>Cortesia:
+                <label id="cortesia" Text=" - ">
+                    <%= cortesia %>
+                </label>
+            </p>
+            <p>Observação:
+                <label id="obs" Text=" - ">
+                    <%= obs %>
+                </label>
+            </p>
+            <hr />
 
-        <hr />
-        
-        <p class="fs-6"><strong>2 - Descrição do Veículo</p></strong>
-        <p>Veículo:
-            <label id="Modeloveiculo" Text=" - ">
-                <%= modeloVeiculo %>
-            </label>
-        </p>
-        <div class="row">
-            <div class="col">
-                <p>Ano/Modelo:
-                    <label id="anoModelo" Text=" - ">
-                        <%= anoModelo %>
-                    </label>
-                </p>
+            <p class="fs-6"><strong>3 - Características do Veículo Informado na Negociação.</p></strong>
+
+            <p>3.1 - Comprador ciente da disponibilidade de uma unidade junto ao Fabricante que será solicitadapela
+                concessionária somente após o sinal de compra e assinatura do respectivo contrato.</p>
+            <p>3.2 - Prazo previsto de entrega:
+                <label id="prazoEntrega" Text=" - " Visible="false">
+                    <%= prazoEntrega %>
+                </label>acima de 90 dias, após
+                comprovação de todos os os pagamentos que compõem o preço do veículo (sinal, pagto à vista,
+                financiamento de agentes bancários e/ou consórcios).
+            </p>
+            <p>3.3 - O(s) preço(s) do(s) veículo(s) estão sujeitos à alteração(ões), conforme tabela do valor do(s)
+                veículo(s) à época do faturamento.</p>
+            <p>3.4 - Fica ciente o comprador que o fabricante poderá alterar o modelo do veículo escolhido , bem
+                como , alterar os itens de série do veículo, entre a data da compra e a data da entrega do veículo ,
+                ficando a cargo do comprador o ônus destas mudanças.</p>
+
+            <div style="break-after: page"></div>
+
+
+            <p>3.5 - No preço vigente na data do faturamento, exceto se de outra forma ajustado entre as partes ,já
+                estão incluídos impostos, encargos.despesas, exceto aquelas necessárias ao licenciamento,
+                emplacamento.seguros. Está incluído no preço do(s) veículo(s) o valor do transporte deste até a
+                concessionária.</p>
+            <p>3.6 - No caso de haver por parte do cliente alteração no pedido do veículo, deverão as partes firmar
+                termo aditivo ao presente contrato com relação a(s) alteração(oes) requeridas pelo comprador.</p>
+
+            <p class="fs-6"><strong>4 - Condições de Pagamento</p></strong>
+
+            <p>4.1 - Valor do Veículo: R$
+                <label id="valorVeiculo" Text=" - ">
+                    <%= valorVeiculo %>
+                </label>
+            </p>
+            <p>4.2 - Sinal á Vista: R$
+                <label id="sinal" Text=" - ">
+                    <%= sinal %>
+                </label>
+            </p>
+            <p>4.3 - Sinal veículo seminovo - Placa
+                <%= veiculoSeminovo %>, avaliado em R$ <%= avaliacao %>, data avaliação <%= dataAvaliacao %>
+                aceitação do veículo seminovo como parte de pagamento do negócio somente será confirmada após
+                observadas condições disposto na cláusula 5.8 deste instrumento.
+            </p>
+            <p>4.4 - O Veículo seminovo descrito na cláusula 4.3, estará sujeito.nova avaliação no caso do mesmo ser
+                entregue somente após.disponibilidade do veículo OKM na concessionária.</p>
+            <p>4.5 - O comprador está ciente que se houver.cancelamento ou desistência de compra, a AUTOMAX não irá
+                devolver.veículo de PLACA
+                <label id="lbPlacaSeminovo2" Text=" - "></label>, entregue como sinal de
+                compra, mas fará pagamento ao Sr.(a)
+                <label id="lbCliente2" Text=" - "></label>
+                do valor de R$
+                <label id="lbValorSeminovo2" Text=" - "></label>
+                avaliação realizada em
+                <label id="lbDataAvaliacao2" Text=" - "></label>, corrigida monetariamente
+                pelos índices legais da tabela do Tribunal de Justiça do Estado de Minas Gerais.
+            </p>
+            <p>4.6 - Restante do pagamento do veículo OKM será após emissão da Nota Fiscal, em conformidade
+                com.disposto na cláusula 3.4 do presente instrumento.</p>
+
+            <p class="fs-6"><strong>5 - Cláusulas Condições da Venda</strong></p>
+
+            <p>5.1 - Após preenchido assinado pelas partes todo pedido com os dados do veículo pelo comprador, este
+                só poderá ser alterado ou modificado caso haja anuência de ambas as partes e, sejam ressarcidas pelo
+                adquirente do veículo okm as despesas que houver decorrentes do faturamento.</p>
+            <p>5.2 - Nas condições de pagamento prazo ou financiamento,.não aprovação da ficha cadastral constitui
+                motivo para rescisão do negócio.</p>
+            <p>5.3 - As responsabilidades pelas informações cadastrais não cabem.vendedora nos casos de
+                financiamento..presente negócio estará desfeito de pleno direito, com.restituição da importância
+                paga pelo comprador.título de entrada.parte de pagamento, na hipótese de que.agente financeiro/ou
+                consórcio não aprovar.operação.</p>
+            <p>5.4 - A vendedora não assume nenhuma responsabilidade sobre os indexadores ou critérios de
+                atualização monetária das suas financeiras ou consórcio.</p>
+            <p>5.5 - Quando.veículo transitar, por solicitação do comprador, qualquer dano, se houver, correrá por
+                conta do mesmo.</p>
+            <p>5.6 - O veículo será entregue ao comprador ou pessoa devidamente autorizada por ele mediante
+                apresentação de autorização com firma reconhecida. </p>
+            <p>5.7 - A AUTOMAX, informa, que na hipótese de ocorrer a desistência da compra do veículo descrito
+                neste contrato de compra e venda , o comprador deverá pagar à Concessionária uma multa contratual no
+                valor de 2.000,00 ( dois mil reais ). </p>
+            <p>5.8 - VENDEDORA informa ao COMPRADOR que.negociação de compra.venda do veículo, somente será
+                concluída, após ser realizado.laudo de avaliação cautelar feito por uma empresa especializada.após
+                ser realizada.consulta jurídica do veículo entregue como parte de pagamento.de seu proprietário.
+                Informa ainda.VENDEDORA que, caso.referido veiculo não seja aprovado no citado laudo (por qualquer
+                vício “oculto”), ou não seja aprovado na mencionada consulta jurídica,.veículo poderá sofrer
+                alteração no valor de sua avaliação e/ou.cancelamento da compra.venda. </p>
+            <p>5.9 - O comprador procederá.vistoria no veículo no ato da entrega do bem novo.</p>
+
+            <p class="fs-6"><strong>6 - Lei 13.111/ 2015.Impostos, taxas, multas.restrições sobre.veículo quando da entrega do mesmo pela
+                concessionária. Assinalar.ocorrência de alguma(s) da(s) situações abaixo:</strong></p>
+
+            <p>6.1 - Valor dos Tributos incidentes sobre a comercialização do veículo: R$
+                <label id="lbtributo" Text=" - "></label>
+            </p>
+            <p>6.2 - Situação de regularidade do veículo quanto.:</p>
+            <p>
+                <checkBox id="cbGarantia" />
+                - Garantia de procedência .
+            </p>
+            <p>
+                <checkBox id="cbDebitoMultas" />
+                - Débito de multas/taxas anuais legalmente devidas :
+            </p>
+            <div class="row">
+                <div class="col">
+                    <p>Multas:
+                        <label id="lbMultas" Text=" - "></label>
+                    </p>
+                </div>
+                <div class="col">
+                    <p>Taxas Anuais:
+                        <label id="lbTaxas" Text=" - "></label>
+                    </p>
+                </div>
             </div>
-            <div class="col">
-                <p>Cor:
-                    <label id="corVeiculo" Text=" - ">
-                        <%= corVeiculo %>
-                    </label>
-                </p>
+            <p>
+                <checkBox id="cbDebitosImpostos" />
+                - Débitos de impostos.
+            </p>
+            <p>
+                <checkBox id="cbAliencacao" />
+                - Alienação fiduciária ou reserva de domínio.
+            </p>
+            <p>
+                <checkBox id="CheckBox1" />
+                - Existência de qualquer outro registro que limita ou impeça a circulação do veículo?.
+            </p>
+
+            <div style="break-after: page"></div>
+
+            <p class="fs-6"><strong>7 - Compartilhamento de Dados</strong></p>
+          
+            <p>7.1 - Para cumprimento da obrigação contatual e legal vinculada à execução do presente contrato, a
+                concessionária compartilhará os dados pessoais do Titular com outros agentes de tratamento de dados,
+                para as finalidades listadas neste instrumento, comprometendo-se todos os envolvidos com os
+                princípios da boa-fé, finalidade, adequação, necessidade, livre acesso, qualidade dos dados,
+                transparência, segurança, prevenção, não discriminação e responsabilização e prestação de contas.
+            </p>
+            <p>7.2 - A concessionária, em decorrência do seu contrato com a montadora , poderá realizar a
+                transferência internacional dos Dados Pessoais tratados, observando as previsões legais aplicáveis.
+            </p>
+            <p>7.3 - A concessionária e seus parceiros selecionados se responsabilizam por manter medidas de
+                segurança, técnicas e administrativas suficientes a proteger os dados pessoais do Titular), se
+                comprometendo com sua notificação, caso ocorra algum incidente de segurança que possa acarretar
+                risco ou dano relevante, conforme artigo 48 da Lei n° 13.709/2018.</p>
+            <p>7.4 - O Titular poderá acessar livremente os seus dados pessoais, em consulta facilitada e gratuita,
+                como o objetivo de garantir a integralidade dos seus dados. A gratuidade será mantida, desde que não
+                haja pedidos manifestamente infundados, excessivos ou repetitivos, casos estes nos quais serão
+                cobradas taxas adicionais pelo acesso aos dados, tendo-se em vista os custos envolvidos na consulta.
+                Para exercer o seu direito de acesso e retificação, o Titular de dados pessoais deverá encaminhar um
+                e-mail ao DPO: jurídico@automaxfiat.com.br, que em prazo razoável, informará ao titular sobre o
+                tratamento.</p>
+            <p>7.5 - À concessionária e os seus parceiros selecionados utilizarão e manterão os dados pessoais do
+                Titular arquivados em meio digital, durante todo o período contratualmente firmado para as
+                finalidades relacionadas nesse termo e ainda após o término da contratação para cumprimento de
+                obrigação legal ou impostas por órgãos de fiscalização, nos termos do artigo 16 da Lei n°
+                13.709/2018.</p>
+            <p>7.6 - O Titular está ciente que na medida do permitido pela legislação “Lei Geral de Proteção de
+                Dados”, o GRUPO AUTOMAX e a montadora poderão também tratar os seus dados pessoais e informações
+                sobre o seu veículo para realizar estudos visando o desenvolvimento e melhoria em nossos produtos e
+                serviços, para enviar comunicação a você sobre a concessionária e a montadora, seus produtos e
+                serviços, bem como poderá entrar em contrato para realização da pesquisa de satisfação.</p>
+            <p>7.7 - O prazo de armazenamento dos dados físicos será por 05 ( cinco ) anos e o prazo de
+                armazenamento dos dados digitais será de 10( dez ) anos prorrogável por mais 05( cinco ) anos, em
+                conformidade com o disposto na legislação vigente do CDC - Código de Defesa do Consumidor e da LGPD
+                – Lei Geral de Proteção de Dados.</p>
+            <br />
+
+            <div style="break-after: page"></div>
+
+            <br />
+            <p>Belo Horizonte,
+                <h5 id="dataAtual">()</h5>
+            </p>
+            <br />
+            <br />
+            <p><strong>De Acordo: </strong></p>
+            <br />
+            <p>Cliente</p>
+            <p>Assinatura: ________________________</p>
+            <hr />
+
+            <br />
+            <p>Vendedor</p>
+            <p>Assinatura: ________________________</p>
+            <hr />
+            <br />
+            <br />
+            <p>Gerente</p>
+            <hr />
             </div>
-        </div>
-        <p>Opcional:
-            <label id="opcional" Text=" - ">
-                <%= opcionais %>
-            </label>
-        </p>
-        <p>Cortesia:
-            <label id="cortesia" Text=" - ">
-                <%= cortesia %>
-            </label>
-        </p>
-        <p>Observação:
-            <label id="obs" Text=" - ">
-                <%= obs %>
-            </label>
-        </p>
-        <hr />
-        <p class="fs-6"><strong>3 - Características do Veículo Informado na Negociação.</p></strong>
 
-        <p>3.1 - Comprador ciente da disponibilidade de uma unidade junto ao Fabricante que será solicitadapela
-            concessionária somente após o sinal de compra e assinatura do respectivo contrato.</p>
-        <p>3.2 - Prazo previsto de entrega:
-            <label id="prazoEntrega" Text=" - " Visible="false">
-                <%= prazoEntrega %>
-            </label>acima de 90 dias, após
-            comprovação de todos os os pagamentos que compõem o preço do veículo (sinal, pagto à vista,
-            financiamento de agentes bancários e/ou consórcios).
-        </p>
-        <p>3.3 - O(s) preço(s) do(s) veículo(s) estão sujeitos à alteração(ões), conforme tabela do valor do(s)
-            veículo(s) à época do faturamento.</p>
-        <p>3.4 - Fica ciente o comprador que o fabricante poderá alterar o modelo do veículo escolhido , bem
-            como , alterar os itens de série do veículo, entre a data da compra e a data da entrega do veículo ,
-            ficando a cargo do comprador o ônus destas mudanças.</p>
+        </form>
+    </body>
 
-        <div style="break-after: page"></div>
+    <script>
 
-    </form>
-</body>
+        var data, dia, mes, ano;
 
-<script>
-    var data = new Date();
+        data = new Date();
 
-    var dia = String(data.getDate()).padStart(2, '0');
+        dia = data.getDate();
+        mes = data.getMonth();
+        ano = data.getFullYear();
 
-    var mes = String(data.getMonth() + 1).padStart(2, '0');
+        mesAno = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-    var ano = data.getFullYear();
+        dataAtual = dia + " de " + mesAno[mes] + " de " + ano;
 
-    dataAtual = dia + '/' + mes + '/' + ano;
-
-    document.getElementById('dataAtual').innerHTML = dataAtual;
-
-    
-</script>
+        document.getElementById('dataAtual').innerHTML = dataAtual;
 
 
-<%- include('includes/footer') %>
+    </script>
+
+
+    <%- include('includes/footer') %>

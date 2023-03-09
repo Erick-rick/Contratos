@@ -46,7 +46,7 @@ app.post('/viewContratoVN',(req, res) => {
     const vendedor = req.body.vendedor;
     const nomeCliente = req.body.nomeCliente;
     const dataNascimento = req.body.dataNascimento;
-    const RG = req.body.rg;
+    const RG = req.body.RG;
     const CPF_CNPJ = req.body.CPF_CNPJ;
     const telefone = req.body.telefone;
     const email = req.body.email;
@@ -69,12 +69,13 @@ app.post('/viewContratoVN',(req, res) => {
     const sinal = req.body.sinal;
     const valorTributos = req.body.valorTributos;
     const veiculoSeminovo = req.body.veiculoSeminovo;
+    const dataAvaliacao = req.body.dataAvaliacao;
     const avaliacao = req.body.avaliacao;
     const loja = req.body.loja;
 
   res.render('viewContratoVN',  { vendedor, nomeCliente, endereco, dataNascimento, RG, CPF_CNPJ, telefone, email, cep,
     numero, bairro, complemento, cidade, estado, modeloVeiculo, corVeiculo, opcionais, anoModelo, 
-    cortesia, obs, prazoEntrega, valorVeiculo, sinal, valorTributos, veiculoSeminovo, avaliacao, loja });
+    cortesia, obs, prazoEntrega, valorVeiculo, sinal, valorTributos, veiculoSeminovo, dataAvaliacao, avaliacao, loja });
 })
 
 app.post('/resultContratoVN', (req, res) => {
