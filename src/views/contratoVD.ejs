@@ -31,7 +31,7 @@
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="first-name-column">Vendedor</label>
-                                            <input type="text" id="Vendedor" class="form-control" placeholder="Vendedor" name="fname-column" required>
+                                            <input type="text" id="Vendedor" name="vendedor" class="form-control" placeholder="Vendedor" required>
                                         </div>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="first-name-column">Cliente</label>
-                                            <input type="text" id="txbCliente" class="form-control" placeholder="Cliente" name="fname-column" required>
+                                            <input type="text" id="nomeCliente" name="nomeCliente" class="form-control" placeholder="Cliente"  required>
                                         </div>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="first-name-column">Razão Social</label>
-                                            <input type="text" id="txbRazaoSocial" class="form-control" placeholder="Cliente" name="fname-column" required>
+                                            <input type="text" id="razaoSocial" class="form-control" placeholder="Razão Social"name="razaoSocial" required>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="city-column">Telefone</label>
-                                            <input type="text" name="telefone" id="telefone1"  class="form-control" placeholder="Telefone" maxlength="15" required />
+                                            <input type="text" name="telefone" id="telefone"  class="form-control" placeholder="Telefone" maxlength="15" required />
                                         </div>
                                     </div>
                                     
@@ -80,7 +80,7 @@
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="company-column">Email</label>
-                                            <input type="email" id="txbEmail" runat="server" class="form-control" name="company-column" placeholder="Email" required>
+                                            <input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
                                         </div>
                                     </div>
                                 </div>
@@ -88,13 +88,13 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="company-column">CPF/CNPJ</label>
-                                            <input type="text" id="txbCPFCNPJ" runat="server" class="form-control" name="cpfcnpj" onfocus="retirarFormatacao(this);" onblur="formatarCampo(this);" maxlength="14" placeholder="CPF/CNPJ" required/>
+                                            <input type="text" id="CPF_CNPJ" runat="server" class="form-control" name="CPF_CNPJ" onfocus="retirarFormatacao(this);" onblur="formatarCampo(this);" maxlength="14" placeholder="CPF/CNPJ" required/>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="company-column">Inscrição Estadual</label>
-                                            <input type="text" id="txbInscricao" runat="server" class="form-control" name="company-column" placeholder="Inscrição Estadual" required>
+                                            <input type="text" id="inscricaoEstadual" class="form-control" name="inscricaoEstadual" placeholder="Inscrição Estadual" required>
                                         </div>
                                     </div>
                                 </div>
@@ -103,19 +103,19 @@
                                      <div class="col-md-3 col-12">
                                         <div class="form-group">
                                             <label for="email-id-colunm">CEP</label>                                                        
-                                            <input name="cep" type="text" runat="server" id="txbCEP" class="mascCEP form-control" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="CEP" required/>
+                                            <input name="cep" type="text" id="cep" class="mascCEP form-control" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="CEP" required/>
                                         </div>
                                     </div>
                                     <div class="col-md-7 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Endereço</label>
-                                            <input type="text" id="txbEndereco" runat="server" class="form-control" name="email-id-column" placeholder="Endereço" required>
+                                            <input type="text" id="endereco" class="form-control" name="endereco" placeholder="Endereço" required>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Número</label>
-                                            <input type="text" id="txbNumero" runat="server" class="form-control" name="email-id-column" placeholder="Número" required>
+                                            <input type="text" id="numero" class="form-control" name="numero" placeholder="Número" required>
                                         </div>
                                     </div>
                                     
@@ -124,25 +124,25 @@
                                     <div class="col-md-4 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Bairro</label>
-                                            <input type="text" id="txbBairro" runat="server" class="form-control" name="email-id-column" placeholder="Bairro" required>
+                                            <input type="text" id="bairro" class="form-control" name="bairro" placeholder="Bairro" required>
                                         </div>
                                     </div>
                                     <div class="col-md-3 col-12">
                                         <div class="form-group">
                                             <label for="email-id-colunm">Complemento</label>
-                                            <input type="text" id="txbComplemento" runat="server" class="form-control" name="email-id-colum" placeholder="Complemento" />
+                                            <input type="text" id="complemento" class="form-control" name="complemento" placeholder="Complemento" />
                                         </div>
                                     </div>                                               
                                     <div class="col-md-3 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Cidade</label>
-                                            <input type="text" id="txbCidade" runat="server" class="form-control" name="email-id-column" placeholder="Cidade" required>
+                                            <input type="text" id="cidade" class="form-control" name="cidade" placeholder="Cidade" required>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Estado</label>
-                                            <input type="text" id="txbEstado" runat="server" class="form-control" name="email-id-column" placeholder="Estado" required>
+                                            <input type="text" id="estado" class="form-control" name="estado" placeholder="Estado" required>
                                         </div>
                                     </div>
                                 </div>
@@ -150,13 +150,13 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Categoria</label>
-                                            <input type="text" id="txbCategoria" runat="server" class="form-control" name="email-id-column" placeholder="Categoria" required>
+                                            <input type="text" id="categoria" class="form-control" name="categoria" placeholder="Categoria" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Desconto</label>
-                                            <input type="text" id="txbDesconto" runat="server" class="form-control" name="email-id-column" placeholder="Desconto (%)" required>
+                                            <input type="text" id="desconto" class="form-control" name="desconto" placeholder="Desconto (%)" required>
                                         </div>
                                     </div>
                                 </div>
@@ -185,7 +185,7 @@
                                     <div class="col-md-2 col-12">
                                         <div class="form-group">
                                             <label for="first-name-column">Qtde</label>
-                                            <input type="number" id="txbQtde" runat="server" class="form-control" placeholder="Qtde" min="0.00" max="9999" step="1" name="fname-column" required>
+                                            <input type="number" id="qtdeVeiculo" class="form-control" placeholder="Qtde" min="0.00" max="9999" step="1" name="qtdeVeiculo" required>
                                         </div>
                                     </div>
                                 </div>
@@ -193,19 +193,19 @@
                                     <div class="col-md-3 col-12">
                                         <div class="form-group">
                                             <label for="first-name-column">Ano</label>
-                                            <input type="number" id="txbAno" runat="server" class="form-control" min="2020" max="2100" step="1" placeholder="Ano" name="fname-column" required>
+                                            <input type="number" id="anoModelo" class="form-control" min="2020" max="2100" step="1" placeholder="Ano" name="ano" required>
                                         </div>
                                     </div>
                                     <div class="col-md-3 col-12">
                                         <div class="form-group">
                                             <label for="last-name-column">Modelo</label>
-                                            <input type="number" id="txbModelo" runat="server" class="form-control" min="2020" max="2100" step="1" placeholder="Modelo" name="lname-column" required>
+                                            <input type="number" id="modelo" class="form-control" min="2020" max="2100" step="1" placeholder="Modelo" name="modelo" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="city-column">Cor</label>
-                                            <input type="text" id="txbCor" runat="server" class="form-control" placeholder="Cor" name="lname-column" required>
+                                            <input type="text" id="cor" class="form-control" placeholder="Cor" name="cor" required>
                                         </div>
                                     </div>
                                 </div>
@@ -213,33 +213,33 @@
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="company-column">Opcionais</label>
-                                            <input type="text" id="txbOpcional" runat="server" class="form-control" name="company-column" placeholder="Opcional..." />
+                                            <input type="text" id="opcionais" class="form-control" name="opcionais" placeholder="Opcional..." />
                                         </div>
                                     </div>
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="company-column">Cortesias</label>
-                                            <input type="text" id="txbCortesia" runat="server" class="form-control" name="company-column" placeholder="Cortesias..." />
+                                            <input type="text" id="cortesia" class="form-control" name="cortesia" placeholder="Cortesias..." />
                                         </div>
                                     </div>
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="company-column">Observação</label>
-                                            <input type="text" id="txbObservacao" runat="server" class="form-control" name="company-column" placeholder="Observações..." />
+                                            <input type="text" id="obs" class="form-control" name="obs" placeholder="Observações..." />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="email-id-column">Preço Público (R$)</label>
-                                            <input type="text" id="txbPrecoPublico" runat="server" class="form-control" placeholder="R$..." name="fname-column" onKeyPress="return(moeda(this,'.',',',event))" required>
+                                            <label for="email-id-column">Preço Público(R$)</label>
+                                            <input type="text" id="precoPublico" class="form-control" placeholder="R$..." name="precoPublico" onKeyPress="return(moeda(this,'.',',',event))" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="email-id-column">Preço Venda (R$)</label>
-                                            <input type="text" id="txbPrecoVenda" runat="server" class="form-control" placeholder="R$..." name="fname-column" onKeyPress="return(moeda(this,'.',',',event))" required>
+                                            <label for="email-id-column">Preço Venda(R$)</label>
+                                            <input type="text" id="precoVenda" class="form-control" placeholder="R$..." name="precoVenda" onKeyPress="return(moeda(this,'.',',',event))" required>
                                         </div>
                                     </div>
                                 </div>
@@ -247,13 +247,13 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Data da Compra</label>
-                                            <input type="date" id="txbDataCompra" runat="server" class="form-control" name="email-id-column" placeholder="Prazo de Entrega" required>
+                                            <input type="date" id="dataCompra" class="form-control" name="dataCompra" placeholder="Prazo de Entrega" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Prazo de Entrega</label>
-                                            <input type="number" id="txbPrazo" runat="server" class="form-control" name="email-id-column" min="30" max="999" step="5"  placeholder="Prazo de Entrega" required>
+                                            <input type="number" id="prazoEntrega" class="form-control" name="prazoEntrega" min="30" max="999" step="5"  placeholder="Prazo de Entrega" required>
                                         </div>
                                     </div>
                                 </div>
@@ -261,8 +261,8 @@
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="first-name-column">Local de entrega</label>
-                                            <input type="text" id="txbLoja" runat="server" class="form-control" placeholder="Local de entrega">
-                                            </>
+                                            <input type="text" id="loja" class="form-control" nome="loja" placeholder="Local de entrega">
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -270,7 +270,7 @@
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Forma de Pagamento</label>
-                                            <input type="text" id="txbPagamento" runat="server" class="form-control" name="email-id-column" placeholder="Forma de Pagamento">
+                                            <input type="text" id="pagamento"  class="form-control" name="pagamento" placeholder="Forma de Pagamento">
                                         </div>
                                     </div>
                                 </div>
@@ -286,7 +286,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">
-                                                <asp:CheckBox runat="server" ID="VeiculoSeminovo" Text="&ensp; Dados do Veículo Semi Novo" AutoPostBack="true" /></h4>
+                                                <asp:CheckBox id="VeiculoSeminovo" Text="&ensp; Dados do Veículo Semi-novo" AutoPostBack="true" /></h4>
                         </div>
                         <div class="card-content">
                             <div class="card-body">
@@ -295,19 +295,19 @@
                                     <div class="col-md-4 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Placa</label>
-                                            <input type="text" id="placaUsado" runat="server" class="form-control" name="email-id-column" placeholder="Placa" disabled>
+                                            <input type="text" id="placaUsado" class="form-control" name="placaUsado" placeholder="Placa" disabled>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Valor Avaliação</label>
-                                            <input type="text" id="valorAvaliacao" runat="server" class="form-control" placeholder="R$..." name="fname-column" onKeyPress="return(moeda(this,'.',',',event))" disabled>
+                                            <input type="text" id="valorAvaliacao" class="form-control" placeholder="R$..." name="valorAvaliacao" onKeyPress="return(moeda(this,'.',',',event))" disabled>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-12">
                                         <div class="form-group">
                                             <label for="email-id-column">Data Avaliação</label>
-                                            <input type="date" id="dtAvaliacao" runat="server" class="form-control" name="email-id-column" placeholder="" disabled>
+                                            <input type="date" id="dtAvaliacao" class="form-control" name="dtAvaliacao" placeholder="" disabled>
                                         </div>
                                     </div>
                                 </div>
@@ -319,7 +319,8 @@
 
             <div class="row text-center">
                 <div class="col-md-12 col-12">
-                    <asp:Button runat="server" ID="btnContrato" Text="Gerar Contrato" class="btn btn-primary w-100" OnClick="BtnGerar_Click" />
+                    <Button id="btnContrato" Text="Gerar Contrato" class="btn btn-primary w-100" OnClick="BtnGerar_Click"></Button>
+
                 </div>
             </div>
         </section>
