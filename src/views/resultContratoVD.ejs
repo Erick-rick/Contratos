@@ -211,11 +211,10 @@
                     pagar à Concessionária uma multa contratual no valor de 2.000,00 ( dois mil reais ).</p>
                 <p class="text-justify"><strong>18.1 - </strong>O comprador está ciente que se houver o cancelamento ou
                     desistência de compra, a AUTOMAX não irá devolver o veículo de placa <strong>
-                        <asp:Label runat="server" ID="lbPlacaSeminovo" Text=" - "></asp:Label>
+                        <%= placaUsado %>
                     </strong>, entregue como sinal de compra , mas fará o pagamento ao Sr. (a ) <asp:Label
-                        runat="server" ID="lbNomeResponsavel" Text=" - "></asp:Label> do valor de R$ <asp:Label
-                        runat="server" ID="lbValorSeminovo" Text=" - "></asp:Label> referente avaliação realizada em
-                    <asp:Label runat="server" ID="lbDataAvaliacao" Text=" - "></asp:Label>, corrigida monetariamente
+                        runat="server" ID="lbNomeResponsavel" Text=" - "></asp:Label> do valor de R$ <%= valorAvaliacao  %>
+                        referente avaliação realizada em <%= dataAvaliacao %>, corrigida monetariamente
                     pelos índices legais da tabela do Tribunal de Justiça do Estado de Minas Gerais.</p>
 
                 <div style="break-after:page"></div>
@@ -255,15 +254,12 @@
 
                             <%--PAGINA 3--%>
                                 <p><strong>DADOS PARA FECHAMENTO DO PEDIDO</strong></p>
-                                <p>Data da Compra: <asp:Label runat="server" ID="lbDataCompra" Text=" - "></asp:Label>
+                                <p>Data da Compra: <%= dataCompra %>
                                 </p>
-                                <p>Concessionária de Entrega: <asp:Label runat="server" ID="lbConcessionaria"
-                                        Text=" - "></asp:Label>
+                                <p>Concessionária de Entrega: <%= loja  %>
                                 </p>
-                                <p>Prazo de Entrega: <asp:Label runat="server" ID="lbPrazo" Text=" - " Visible="false">
-                                    </asp:Label>Prazo indeterminado ( em virtude ao COVID-19)</p>
-                                <p>Forma de Pagamento: <asp:Label runat="server" ID="lbFormaPagamento" Text=" - ">
-                                    </asp:Label>
+                                <p>Prazo de Entrega: <% prazoEntrega %> Prazo indeterminado ( em virtude ao COVID-19)</p>
+                                <p>Forma de Pagamento: <% formaPagamento %>
                                 </p>
                                 <div class="container p-4">
                                     <p><strong>LI, ESTOU CIENTE E DE ACORDO COM AS CLÁUSULAS ACIMA DESCRITAS.</strong>
@@ -276,8 +272,7 @@
                                             <div class="col-md-6">
                                                 <hr />
                                                 <p>
-                                                    <asp:Label runat="server" ID="lbNomeCliente2" Text=" - ">
-                                                    </asp:Label>
+                                                    <%= nomeCliente %>>
                                                 </p>
                                             </div>
                                             <div class="col-md-3"></div>
