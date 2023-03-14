@@ -1,5 +1,5 @@
 <%- include('includes/head') %>
-<%- include('includes/menu') %>
+<%- include('includes/nav') %>
 
     <div class="main-content container-fluid">
         <div class="page-title">
@@ -12,7 +12,7 @@
                     <nav aria-label="breadcrumb" class='breadcrumb-header'>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Contrato Automax</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Contrato VD</li>
+                            <li class="breadcrumb-item active" aria-current="page">Contrato Venda Direta</li>
                         </ol>
                     </nav>
                 </div>
@@ -20,6 +20,8 @@
         </div>
 
         <section id="multiple-column-form">
+
+        <form action="/resultContratoVD" method="POST">
 
             <!--Vendedor-->
             <div class="row match-height">
@@ -179,7 +181,7 @@
                                     <div class="col-md-10 col-12">
                                         <div class="form-group">
                                             <label for="first-name-column">Veículo</label>
-                                            <asp:DropDownList runat="server" ID="ddlModels" CssClass="form-control"></asp:DropDownList>
+                                            <DropDownList runat="server" ID="ddlModels" CssClass="form-control"></DropDownList>
                                         </div>
                                     </div>
                                     <div class="col-md-2 col-12">
@@ -325,6 +327,8 @@
             </div>
         </section>
     </div>
+    </form>
+
     <a id="PointA" name="PointA"></a>
 
     <%- include('includes/footer') %>
