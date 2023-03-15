@@ -1,101 +1,22 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contratob2b.aspx.cs" Inherits="ContratoAutomax.View.Contratob2b" %>
+<%- include('includes/head'); %>
+    <%- include('includes/nav'); %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contrato Automax - Contrato Varejo</title>
-
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
-
-    <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="../assets/css/app.css">
-    <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
-    <script type="text/javascript">
-        function showContent() {
-            element = document.getElementById("content");
-            check = document.getElementById("check");
-            if (check.checked) {
-                element.style.display = 'block';
+        <script type="text/javascript">
+            function showContent() {
+                element = document.getElementById("content");
+                check = document.getElementById("check");
+                if (check.checked) {
+                    element.style.display = 'block';
+                }
+                else {
+                    element.style.display = 'none';
+                }
             }
-            else {
-                element.style.display = 'none';
-            }
-        }
-    </script>
-</head>
-<body>
-    <form runat="server" id="Form1">
-        <div id="app">
-            <div id="sidebar" class='active'>
-                <div class="sidebar-wrapper active">
-                    <div class="sidebar-header">
-                        <img src="../Images/AutomaxLogo.png" class="w-100" alt="" srcset="">
-                    </div>
-                    <div class="sidebar-menu">
-                        <ul class="menu">
-                            <li class='sidebar-title'>Menu</li>
-                            <li class="sidebar-item" ruinat="server" id="menuContratoVN">
-                                <a href="Index.aspx" class='sidebar-link'>
-                                    <i data-feather="file-text" width="20"></i>
-                                    <span>Contrato VN</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item  " ruinat="server" id="menuContratoVD">
-                                <a href="Contratovd.aspx" class='sidebar-link'>
-                                    <i data-feather="file-text" width="20"></i>
-                                    <span>Contrato VD</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item  " ruinat="server" id="menuContratoB2B">
-                                <a href="Contratob2b.aspx" class='sidebar-link'>
-                                    <i data-feather="file-text" width="20"></i>
-                                    <span>Contrato B2B</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item  has-sub">
-                                <a href="#" class="sidebar-link">
-                                    <i data-feather="settings" width="20"></i>
-                                    <span>Configurações</span>
-                                </a>
-                                <ul class="submenu">
+        </script>
+        </head>
 
-                                    <li>
-                                        <a href="ChangePassword.aspx">Mudar Senha</a>
-                                    </li>                                    
-                                     <li>
-                                        <a href="Usuarios.aspx" runat="server" id="MenuAdm1" visible="false">Usuários</a>
-                                    </li>
-                                    <li>
-                                        <a href="ChangePassword.aspx" runat="server" id="MenuAdm2" visible="false">Modelos</a>
-                                    </li>
-
-                                    <li runat="server" id="menuAdm" visible="false">
-                                        <a href="AdminArea.aspx">Gerenciamento ADM</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-item  ">
-                                <a href="Login.aspx" class='sidebar-link'>
-                                    <i data-feather="log-out" width="20"></i>
-                                    <span>Sair</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
-                </div>
-            </div>
-            <div id="main">
-                <nav class="navbar navbar-header navbar-expand navbar-light">
-                    <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
-                    <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </nav>
-
+        <body>
+                
                 <div class="main-content container-fluid">
                     <div class="page-title">
                         <div class="row">
@@ -115,156 +36,18 @@
                     </div>
                     <section id="multiple-column-form">
 
-                        <%-- Vendedor --%>
-                        <div class="row match-height">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-content">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-md-12 col-12">
-                                                    <div class="form-group">
-                                                        <label for="first-name-column">Vendedor</label>
-                                                        <input type="text" id="txbVendedor" class="form-control" placeholder="Vendedor" runat="server" name="fname-column">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <%-- Dados do Cliente --%>
-                        <div class="row match-height">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Dados do Cliente</h4>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-md-6 col-12">
-                                                    <div class="form-group">
-                                                        <label for="first-name-column">Cliente</label>
-                                                        <input type="text" id="txbCliente" runat="server" class="form-control" placeholder="Cliente" name="fname-column">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-12">
-                                                    <div class="form-group">
-                                                        <label for="last-name-column">CPF/CNPJ</label>
-                                                        <input type="text" id="txbCPFCNPJ" runat="server" class="form-control" name="cpfcnpj" onfocus="retirarFormatacao(this);"  onblur="formatarCampo(this);" maxlength="14" placeholder="CPF/CNPJ" required/>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-6 col-12">
-                                                    <div class="form-group">
-                                                        <label for="city-column">Telefone</label>
-                                                        <input type="text" name="telefone" id="telefone1" runat="server" class="form-control" placeholder="Telefone" maxlength="15" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-12">
-                                                    <div class="form-group">
-                                                        <label for="country-floating">Telefone</label>
-                                                        <input type="text" name="telefone" id="telefone2" runat="server" class="form-control" placeholder="Telefone" maxlength="15" />
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-12 col-12">
-                                                    <div class="form-group">
-                                                        <label for="company-column">Email</label>
-                                                        <input type="email" id="txbEmail" runat="server" class="form-control" name="company-column" placeholder="Email">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">                                                
-                                                <div class="col-md-3 col-12">
-                                                    <div class="form-group">
-                                                        <label for="email-id-colunm">CEP</label>
-                                                        <input name="cep" type="text" runat="server" id="txbCEP" class="mascCEP form-control" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="CEP" required/>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-5 col-12">
-                                                    <div class="form-group">
-                                                        <label for="email-id-column">Endereço</label>
-                                                        <input type="text" id="txbEndereco" runat="server" class="form-control" name="email-id-column" placeholder="Endereço">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-12">
-                                                    <div class="form-group">
-                                                        <label for="email-id-column">Número</label>
-                                                        <input type="number" min="1" id="txbNumero" runat="server" class="form-control" name="email-id-column" placeholder="Número" required>
-                                                    </div>
-                                                </div>                                                
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-4 col-12">
-                                                    <div class="form-group">
-                                                        <label for="email-id-column">Bairro</label>
-                                                        <input type="text" id="txbBairro" runat="server" class="form-control" name="email-id-column" placeholder="Bairro">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3 col-12">
-                                                    <div class="form-group">
-                                                        <label for="email-id-colunm">Complemento</label>
-                                                        <input type="text" id="txbComplemento" runat="server" class="form-control" name="email-id-colum" placeholder="Complemento" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3 col-12">
-                                                    <div class="form-group">
-                                                        <label for="email-id-column">Cidade</label>
-                                                        <input type="text" id="txbCidade" runat="server" class="form-control" name="email-id-column" placeholder="Cidade">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2 col-12">
-                                                    <div class="form-group">
-                                                        <label for="email-id-column">Estado</label>
-                                                        <input type="text" id="txbEstado" runat="server" class="form-control" name="email-id-column" placeholder="Estado">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <%-- Isenção --%>
-                        <div class="row match-height">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Isenção</h4>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-body">
-                                            <div class="row">
+                        <!-- Vendedor -->
+                            <div class="row match-height">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-md-12 col-12">
-                                                        <div class="row">
-                                                            <div class="form-group">
-                                                                <asp:CheckBox runat="server" ID="CheckBox0" Text="&ensp; ICMS Versão" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="form-group">
-                                                                <asp:CheckBox runat="server" ID="CheckBox1" Text="&ensp; ICMS Opcionais" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="form-group">
-                                                                <asp:CheckBox runat="server" ID="CheckBox2" Text="&ensp; IPI Versão" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="form-group">
-                                                                <asp:CheckBox runat="server" ID="CheckBox3" Text="&ensp; IPI Opcionais" />
-                                                            </div>
-                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="vendedor">Vendedor</label>
+                                                            <input type="text" id="vendedor" name="vendedor" class="form-control" placeholder="Vendedor" >
+                                                          </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -272,100 +55,266 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <!-- Dados do Cliente -->
+                                <div class="row match-height">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Dados do Cliente</h4>
+                                            </div>
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <label for="nomeCliente">Cliente</label>
+                                                                <input type="text" id="nomeCliente" name="nomeCliente" class="form-control" placeholder="Cliente" required>
+                                                              </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <label for="last-name-column">CPF/CNPJ</label>
+                                                                <input type="text"  id="CPF_CNPJ" 
+                                                                    class="form-control" name="CPF_CNPJ"
+                                                                    onfocus="retirarFormatacao(this);"
+                                                                    onblur="formatarCampo(this);" maxlength="14"
+                                                                    placeholder="CPF/CNPJ" required />
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-                        <%-- Dados do Veiculo --%>
-                        <div class="row match-height">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Dados do Veículo</h4>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-md-12 col-12">
-                                                    <div class="form-group">
-                                                        <label for="first-name-column">Veículo</label>
-                                                        <asp:DropDownList runat="server" ID="ddlModels" CssClass="form-control"></asp:DropDownList>
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <label for="telefone">Telefone</label>
+                                                                <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Telefone" maxlength="15" required />
+                                                              </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <label for="telefone">Telefone</label>
+                                                                <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Telefone" maxlength="15" required />
+                                                              </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6 col-12">
-                                                    <div class="form-group">
-                                                        <label for="last-name-column">Qtde</label>
-                                                        <input type="number" id="txbQtde" runat="server" class="form-control" placeholder="Qtde" name="lname-column">
+
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-12">
+                                                            <div class="form-group">
+                                                                <label for="email">Email</label>
+                                                                <input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
+                                                              </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6 col-12">
-                                                    <div class="form-group">
-                                                        <label for="city-column">Cor</label>
-                                                        <input type="text" id="txbCor" runat="server" class="form-control" placeholder="Cor" name="lname-column">
+
+                                                    <div class="row">
+                                                        <div class="col-md-3 col-12">
+                                                            <div class="form-group">
+                                                                <label for="cep">CEP</label>
+                                                                <input name="cep" type="text" id="cep"
+                                                                    class="mascCEP form-control" value="" size="10"
+                                                                    maxlength="9" onblur="pesquisacep(this.value);"
+                                                                    placeholder="CEP" required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5 col-12">
+                                                            <div class="form-group">
+                                                                <label for="endereco">Endereço</label>
+                                                                <input type="text" id="endereco" class="form-control" name="endereco" placeholder="Endereço" required>
+                                                              </div>
+                                                        </div>
+                                                        <div class="col-md-4 col-12">
+                                                            <div class="form-group">
+                                                                <label for="numero">Número</label>
+                                                                <input type="text" min="1" id="numero" name="numero" class="form-control"  placeholder="Número" required>
+                                                              </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12 col-12">
-                                                    <div class="form-group">
-                                                        <label for="company-column">Opcionais</label>
-                                                        <input type="text" id="txbOpcional" runat="server" class="form-control" name="company-column" placeholder="Opcional - Separe os opcionais por ; (ponto e virgula)" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6 col-12">
-                                                    <div class="form-group">
-                                                        <label for="company-column">Preço Unitário (R$)</label>    
-                                                        <input type="text" id="txbPreçoUnitario" runat="server" class="form-control" name="company-column" placeholder="Preço Unitário" onkeypress="return(moeda(this,'.',',',event))" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-12">
-                                                    <div class="form-group">
-                                                        <label for="company-column">Preço Total (R$)</label>
-                                                        <input type="text" id="txbPreçoTotal" runat="server" class="form-control" name="company-column" placeholder="Preço Total" onkeypress="return(moeda(this,'.',',',event))" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12 col-12">
-                                                    <div class="form-group">
-                                                        <label for="company-column">Concessionária de entrega</label>
-                                                        <input type="text" id="txbConcess" runat="server" class="form-control" placeholder="Concessionária de entrega" required>
+                                                    <div class="row">
+                                                        <div class="col-md-4 col-12">
+                                                            <div class="form-group">
+                                                                <label for="bairro">Bairro</label>
+                                                                <input type="text" id="bairro"  name="bairro" class="form-control" placeholder="Bairro" required>
+                                                              </div>
+                                                        </div>
+                                                        <div class="col-md-3 col-12">
+                                                            <div class="form-group">
+                                                                <label for="complemento">Complemento</label>
+                                                                <input type="text" id="complemento" name="complemento" class="form-control"  placeholder="Complemento" />
+                                                              </div>
+                                                        </div>
+                                                        <div class="col-md-3 col-12">
+                                                            <div class="form-group">
+                                                                <label for="cidade">Cidade</label>
+                                                                <input type="text" id="cidade"  name="cidade" class="form-control" placeholder="Cidade" required>
+                                                              </div>
+                                                        </div>
+                                                        <div class="col-md-2 col-12">
+                                                            <div class="form-group">
+                                                                <label for="estado">Estado</label>
+                                                                <input type="text" id="estado" name="estado" class="form-control"  placeholder="Estado" required>
+                                                              </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-md-12 col-12">
-                                <asp:Button runat="server" ID="btnContrato" Text="Gerar Contrato" class="btn btn-primary w-100" OnClick="Button3_Click" />
-                            </div>
-                        </div>
+                                <!-- Isenção -->
+                                    <div class="row match-height">
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h4 class="card-title">Isenção</h4>
+                                                </div>
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="row">
+                                                                <div class="col-md-12 col-12">
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <checkBox id="CheckBox0" text="&ensp; ICMS Versão" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <checkBox id="CheckBox1" text="&ensp; ICMS Opcionais" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <checkBox id="CheckBox2" text="&ensp; IPI Versão" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <checkBox id="CheckBox3" text="&ensp; IPI Opcionais" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dados do Veiculo -->
+                                        <div class="row match-height">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">Dados do Veículo</h4>
+                                                    </div>
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12 col-12">
+                                                                    <div class="form-group">
+                                                                        <label for="first-name-column">Veículo</label>
+                                                                        <DropDownList id="ddlModels"
+                                                                            CssClass="form-control"></DropDownList>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6 col-12">
+                                                                    <div class="form-group">
+                                                                        <label for="first-name-column">Qtde</label>
+                                                                        <input type="number" id="qtdeVeiculo" class="form-control" placeholder="Qtde" min="0.00" max="9999" step="1" name="qtdeVeiculo" required>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 col-12">
+                                                                    <div class="form-group">
+                                                                        <label for="city-column">Cor</label>
+                                                                        <input type="text" id="cor" class="form-control" placeholder="Cor" name="cor" required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 col-12">
+                                                                    <div class="form-group">
+                                                                        <label for="company-column">Opcionais</label>
+                                                                        <input type="text" id="opcionais" class="form-control" name="opcionais" placeholder="Opcional..." />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6 col-12">
+                                                                    <div class="form-group">
+                                                                        <label for="company-column">Preço Unitário
+                                                                            (R$)</label>
+                                                                        <input type="text" id="txbPreçoUnitario"
+                                                                            runat="server" class="form-control"
+                                                                            name="company-column"
+                                                                            placeholder="Preço Unitário"
+                                                                            onkeypress="return(moeda(this,'.',',',event))"
+                                                                            required>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 col-12">
+                                                                    <div class="form-group">
+                                                                        <label for="company-column">Preço Total
+                                                                            (R$)</label>
+                                                                        <input type="text" id="txbPreçoTotal"
+                                                                            runat="server" class="form-control"
+                                                                            name="company-column"
+                                                                            placeholder="Preço Total"
+                                                                            onkeypress="return(moeda(this,'.',',',event))"
+                                                                            required>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 col-12">
+                                                                    <div class="form-group">
+                                                                        <label for="company-column">Concessionária de
+                                                                            entrega</label>
+                                                                        <input type="text" id="txbConcess"
+                                                                            runat="server" class="form-control"
+                                                                            placeholder="Concessionária de entrega"
+                                                                            required>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row text-center">
+                                            <div class="col-md-12 col-12">
+                                                <asp:Button runat="server" ID="btnContrato" Text="Gerar Contrato"
+                                                    class="btn btn-primary w-100" OnClick="Button3_Click" />
+                                            </div>
+                                        </div>
                     </section>
                 </div>
 
 
-            </div>
-            <a id="PointA" name="PointA"></a>
-            <footer>
-                <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-                    </div>
-                    <div class="float-end">
-                        <p>2021 &copy; Max</p>
-                    </div>
                 </div>
-            </footer>
-        </div>
-    </form>
-    <script src="../assets/js/feather-icons/feather.min.js"></script>
-    <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/main.js"></script>
-    
-    <script src="../Scripts/ValidaCampos.js"></script>
+                <a id="PointA" name="PointA"></a>
 
-</body>
-</html>
+
+                <footer>
+                    <div class="footer clearfix mb-0 text-muted">
+                        <div class="float-start">
+                        </div>
+                        <div class="float-end">
+                            <p>2021 &copy; Max</p>
+                        </div>
+                    </div>
+                </footer>
+                </div>
+            </form>
+            <script src="../assets/js/feather-icons/feather.min.js"></script>
+            <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+            <script src="../assets/js/app.js"></script>
+            <script src="../assets/js/main.js"></script>
+
+            <script src="../Scripts/ValidaCampos.js"></script>
+
+        </body>
+
+        </html>
