@@ -26,10 +26,17 @@ app.get('/main', (req, res) => {
   res.render('main');
 });
 
+app.get('/users', (req, res) => {
+  res.render('users');
+});
+
+app.get('/modelos', (req, res) => {
+  res.render('modelos');
+});
+
 app.get('/newContrato', (req, res) => {
   res.render('newContrato');
 });
-
 
 app.post('/contrato', (req, res) => {
   const vendedor = req.body.vendedor;

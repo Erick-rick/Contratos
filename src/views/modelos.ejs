@@ -1,0 +1,119 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+
+                <div class="main-content container-fluid">
+                    <div class="page-title">
+                        <div class="row">
+                            <div class="col-12 col-md-6 order-md-1 order-last">
+                                <h3>Modelos</h3>
+                            </div>
+                            <div class="col-12 col-md-6 order-md-2 order-first">
+                                <nav aria-label="breadcrumb" class='breadcrumb-header'>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Contrato Automax</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Modelos</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="section">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Gerenciamento de Modelos
+                                        </div>
+
+                                        <div class="col-md-6 text-end">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Incluir</button>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Remover</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table table-responsive-sm text-sm">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Modelo</th>
+                                            <th scope="col">Versão</th>
+                                            <th scope="col">#</th>
+                                          </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr> 
+                                            <td>01</td>
+                                            <td>Argo</td>
+                                            <td>1.0 Drive</td>
+                                            <td>0</td>
+                                          </tr>
+                                    </tbody>
+                                  </table>   
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+
+                <!--INCLUIR MODELO-->
+               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Incluir Modelo</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+                                        <div class="form-group">
+                                            <label for="first-name-column">Modelo</label>
+                                            <input type="text" id="txbModelo" class="form-control" placeholder="Modelo" runat="server" name="fname-column">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button id="btnIncluir" Text="Incluir" CssClass="btn btn-primary" OnClick="btnIncluir_Click"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--REMOVER MODELO-->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel2">Remover Modelo</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+                                        <div class="form-group">
+                                            <label for="first-name-column">Modelo</label>
+                                            <asp:DropDownList runat="server" CssClass="form-control" ID="ddlExec"></asp:DropDownList>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <asp:Button runat="server" ID="Button1" Text="Remover" CssClass="btn btn-primary" OnClick="btnDelete_Click"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+        </div>
+        
+<%- include('includes/footer') %>
