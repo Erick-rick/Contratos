@@ -21,4 +21,6 @@ User.prototype.register = async function(){
   this.user = await UserModel.create(this.body);
 };
 
+User
+
 
