@@ -48,8 +48,16 @@ app.post('/contrato', (req, res) => {
   const dataNascimento = req.body.dataNascimento;
   const modeloVeiculo = req.body.modeloVeiculo;
 
-  
+
   res.render('contrato', { nome, endereco, dataNascimento, modeloVeiculo});
+});
+
+app.get('/contratoVD', (req, res) => {
+  res.render('contratoVD');
+});
+
+app.get('/contratoB2B', (req, res) => {
+  res.render('contratoB2B');
 });
 
 app.post('/viewContratoVN',(req, res) => {
@@ -84,7 +92,7 @@ app.post('/viewContratoVN',(req, res) => {
     const loja = req.body.loja;
 
   res.render('viewContratoVN',  { vendedor, nomeCliente, endereco, dataNascimento, RG, CPF_CNPJ, telefone, email, cep,
-    numero, bairro, complemento, cidade, estado, modeloVeiculo, corVeiculo, opcionais, anoModelo, 
+    numero, bairro, complemento, cidade, estado, modeloVeiculo, corVeiculo, opcionais, anoModelo,
     cortesia, obs, prazoEntrega, valorVeiculo, sinal, valorTributos, veiculoSeminovo, dataAvaliacao, avaliacao, loja });
 })
 
@@ -118,7 +126,7 @@ app.post('/resultContratoVN', (req, res) => {
     const loja = req.body.loja;
 
     res.render('resultContratoVN', { vendedor, nomeCliente, endereco, dataNascimento, RG, CPF_CNPJ, telefone, cep,
-                numero, bairro, complemento, cidade, estado, modeloVeiculo, corVeiculo, opcionais, 
+                numero, bairro, complemento, cidade, estado, modeloVeiculo, corVeiculo, opcionais,
                 cortesia, obs, prazoEntrega, valorVeiculo, sinal, valorTributos, veiculoSeminovo, avaliacao, loja });
 });
 

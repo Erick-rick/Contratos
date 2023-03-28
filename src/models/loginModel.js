@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+/*const mongoose = require('mongoose');
 const validator = require('validator');
 const bcryptjs = require('bcryptjs');
 
@@ -8,6 +8,7 @@ const bcryptjs = require('bcryptjs');
 //});
 
 //const LoginModel = mongoose.model('Login', LoginSchema);
+
 
 class Login {
   constructor(body) {
@@ -80,3 +81,7 @@ class Login {
 }
 
 module.exports = Login;
+
+*/
+
+
