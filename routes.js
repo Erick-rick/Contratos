@@ -9,6 +9,7 @@ route.get('/', homeController.paginaInicial);
 
 // Rotas de Login
 route.get('/login/index', loginController.index);
+route.post('/login/cadastro', loginController.cadastro);
 route.post('/login/register', loginController.register);
 
 //Rotas de Contratos
@@ -19,7 +20,7 @@ route.post('/login/register', loginController.register);
 route.get('/', (req, res) => {
     res.render('form');
 });
-  
+
 // Rota para processar o formulário e exibir o contrato preenchido
 route.post('/result/resultContratoVN', (req, res) => {
     const vendedor = req.body.vendedor;
@@ -49,7 +50,7 @@ route.post('/result/resultContratoVN', (req, res) => {
     const loja = req.body.loja;
 
     res.render('contrato', { vendedor, nomeCliente, endereco, dataNascimento, RG, CPF_CNPJ, telefone, cep,
-                numero, bairro, complemento, cidade, estado, modeloVeiculo, corVeiculo, opcionais, 
+                numero, bairro, complemento, cidade, estado, modeloVeiculo, corVeiculo, opcionais,
                 cortesia, obs, prazoEntrega, valorVeiculo, sinal, valorTributos, veiculoSeminovo, avaliacao, loja });
 });
 

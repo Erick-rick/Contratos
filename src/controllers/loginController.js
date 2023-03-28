@@ -5,6 +5,15 @@ exports.index = (req, res) => {
   return res.render('login');
 };
 
+exports.cadastro = (req, res) => {
+  try{
+    return res.render('cadastro');
+  }catch(e){
+    return res.render('404');
+  }
+
+};
+
 exports.register = async function(req, res) {
   try {
     const login = new Login(req.body);

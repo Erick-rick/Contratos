@@ -1,0 +1,73 @@
+<%- include('includes/head') %>
+
+
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+<link rel="stylesheet" href="../assets/css/app.css">
+
+    <div id="auth">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-12 mx-auto">
+                    <div class="card pt-4">
+                        <div class="card-body">
+                            <div class="text-center mb-5">
+                                <img src="../assets/images/AutomaxLogo.png" height="48" class='mb-4'>
+                                <h3>Cadastro</h3>
+                                <p>Após preencher as informações, seus dados serão enviados para um administrador do sistema.</p>
+                                <p>Você receberá um email assim que seu cadastro for aprovado.</p>
+                            </div>
+                            <form id="Form1">
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="first-name-column">Nome</label>
+                                            <input type="text" id="txbNome" class="form-control" name="fname-column">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="last-name-column">Email</label>
+                                            <input type="email" id="txbEmail" class="form-control" name="lname-column" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="username-column">CPF</label>
+                                            <input type="text" id="CPF" class="form-control" name="username-column"  maxlength="15">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="first-name-column">Loja</label>
+                                            <select name="txbLoja" id="txbLoja" class="form-control" >
+                                                <option selected>Automax Raja</option>
+                                                <option>Automax Coração Eucarístico</option>
+                                                <option>Automax Barão Homem de Melo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="/login/index">Já tem conta? Login</a>
+                                <div class="clearfix">
+                                    <button class="btn btn-primary float-end" onserverclick="btnSend_Click">Enviar Solicitação</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+        </div>
+    </div>
+
+
+<script src="../assets/js/feather-icons/feather.min.js"></script>
+<script src="../assets/js/app.js"></script>
+
+<script src="../assets/js/main.js"></script>
+
+<%- include('includes/footer') %>
+
+
